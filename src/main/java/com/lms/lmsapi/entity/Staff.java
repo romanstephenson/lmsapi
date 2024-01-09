@@ -3,11 +3,12 @@ package com.lms.lmsapi.entity;
 import java.sql.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,17 +19,21 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Book_Category")
-public class BookCategory {
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+@Table(name = "Staff")
 
-    private String CategoryName;
+public class Staff {
+    @Id
+    @OneToOne(mappedBy = "User")
+	@JoinColumn (name="Id")
+    private User StaffId;
+
+    private String Department;
+
+    private Date HireStartDt;
+
+    private Date HireEndDt;
 
     private Date CreatedDt;
 
     private Date ModifiedDt;
-
 }

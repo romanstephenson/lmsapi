@@ -7,15 +7,17 @@ import javax.persistence.*;
 public class Email {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int Id;
+    private int Id;
 
-    public int UserId;
+    @ManyToOne
+	@JoinColumn (name="Id")
+    private User UserId;
 
-    public String EmailAddress;
+    private String EmailAddress;
 
-    public byte IsPrimary;
+    private int IsPrimary;
 
-    public Date CreatedDt;
+    private Date CreatedDt;
 
-    public Date ModifiedDt;
+    private Date ModifiedDt;
 }

@@ -2,8 +2,6 @@ package com.lms.lmsapi.entity;
 
 import java.sql.Date;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import jakarta.persistence.JoinColumn;
@@ -12,20 +10,21 @@ import jakarta.persistence.OneToOne;
 public class Student 
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int StudentId;
+    @OneToOne(mappedBy = "User")
+	@JoinColumn (name="Id")
+    private User StudentId;
 
     @OneToOne
     @JoinColumn(name = "Id")
-    public StudentCategory Category;
+    private StudentCategory Category;
 
     @OneToOne
     @JoinColumn(name = "Id")
-    public Faculty StudentFaculty;
+    private Faculty StudentFaculty;
 
-    public int Year;
+    private int Year;
 
-    public Date CreatedDt;
+    private Date CreatedDt;
 
-    public Date ModifiedDt;
+    private Date ModifiedDt;
 }

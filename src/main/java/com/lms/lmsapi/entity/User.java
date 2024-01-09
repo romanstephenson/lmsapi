@@ -1,41 +1,54 @@
 package com.lms.lmsapi.entity;
 
 import java.sql.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.*;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
+@Table(name = "User")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
 
-    public String Firstname ;
+    private String Firstname ;
 
-    public String Middlename;
+    private String Middlename;
 
-    public String Lastname;
+    private String Lastname;
 
-    public String Username;
+    private String Username;
 
-    public Date Dob;
+    private Date Dob;
 
-    public String Gender;
+    private String Gender;
 
-    public int ChangePass;
+    private int ChangePass;
 
-    public int IsActive;
+    private int IsActive;
 
-    public Date CreatedDt; 
+    private Date CreatedDt; 
 
-    public Date ModifiedDt;
+    private Date ModifiedDt;
 
-    @ManyToOne
+    @OneToMany(mappedBy = "Email")
     @JoinColumn(name="UserId")
-    public Email Email;
+    @Builder.Default
+    private Set<Email> Email = new HashSet<Email>();;
 
     @OneToOne
     @JoinColumn(name = "Id")
-    public UserType UserType;
+    private UserType UserType;
 
 }

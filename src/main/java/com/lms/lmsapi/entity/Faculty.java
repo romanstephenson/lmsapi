@@ -10,11 +10,11 @@ public class Faculty {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int Id;
+    private int Id;
 
-    public String FacultyName;
+    private String FacultyName;
 
-    public Date CreatedDt;
+    private Date CreatedDt;
 
-    public Date ModifiedDt;
+    private Date ModifiedDt;
 }

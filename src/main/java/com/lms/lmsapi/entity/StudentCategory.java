@@ -11,13 +11,13 @@ public class StudentCategory
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int CatId;
+    private int CatId;
 
-    public String Category;
+    private String Category;
 
-    public int MaxAllowed;
+    private int MaxAllowed;
 
-    public Date CreatedDt;
+    private Date CreatedDt;
 
-    public Date ModifiedDt;
+    private Date ModifiedDt;
 }
