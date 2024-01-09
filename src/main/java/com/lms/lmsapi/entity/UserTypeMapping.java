@@ -31,11 +31,11 @@ public class UserTypeMapping
 
     @OneToOne(mappedBy = "User")
     @JoinColumn(name="Id")
-    private User UserId;
+    private User user;
 
     @OneToOne(mappedBy = "User_Type")
     @JoinColumn(name="Id")
-    private UserType UserType;
+    private UserType userType;
 
     private Date CreatedDt;
 

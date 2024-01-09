@@ -2,13 +2,7 @@ package com.lms.lmsapi.entity;
 
 import java.sql.Date;
 
-import javax.persistence.Entity;
-
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

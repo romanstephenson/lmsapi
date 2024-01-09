@@ -14,28 +14,24 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Book_Issue_Log")
-public class BookIssueLog 
+
+@Table(name = "Verification")
+public class Verification 
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
 
-    @ManyToOne
-    @JoinColumn (name="BookId")
-    private Book book;
+    private int VerificationStatus;
+
+    private String VerificationToken;
 
     @ManyToOne
-    @JoinColumn (name="StudentId")
-    private Student IssuedTo;
+    @JoinColumn(name = "Id")
+    private User Owner;
 
-    @ManyToOne
-    @JoinColumn(name = "StaffId")
-    private Staff IssuedBy;
+    private Date CreatedDt;
 
-    private Date IssueDt;
-
-    private Date ReturnDt;
-
-    private Date ModifiedDt;
+    private Date VerifiedDt;
+    
 }

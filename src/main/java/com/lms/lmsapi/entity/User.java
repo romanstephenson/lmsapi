@@ -22,7 +22,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
 
-    private String Firstname ;
+    private String Firstname;
 
     private String Middlename;
 
@@ -49,6 +49,7 @@ public class User {
 
     @OneToOne
     @JoinColumn(name = "Id")
-    private UserType UserType;
+    private UserType userType;
 
+    
 }

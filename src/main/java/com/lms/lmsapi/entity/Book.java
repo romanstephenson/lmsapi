@@ -2,14 +2,21 @@ package com.lms.lmsapi.entity;
 
 import java.sql.Date;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-public class Book {
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "Book")
+public class Book 
+{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,7 +38,7 @@ public class Book {
 
     @OneToOne
     @JoinColumn(name = "Id")
-    private BookCategory CategoryId;
+    private BookCategory bookCategory;
 
     @OneToOne
     @JoinColumn(name = "Id")
@@ -106,11 +113,11 @@ public class Book {
     }
 
     public BookCategory getCategoryId() {
-        return CategoryId;
+        return bookCategory;
     }
 
-    public void setCategoryId(BookCategory categoryId) {
-        CategoryId = categoryId;
+    public void setCategoryId(BookCategory BookCategory) {
+        bookCategory = BookCategory;
     }
 
     public User getAddedBy() {
@@ -136,22 +143,4 @@ public class Book {
     public void setModifiedDt(Date modifiedDt) {
         ModifiedDt = modifiedDt;
     }
-
-    public Book(int bookId, String title, String author, String description, String publisher, String isbn,
-            Date yearPublished, int availableCopies, BookCategory categoryId, User addedBy, Date createdDt,
-            Date modifiedDt) {
-        BookId = bookId;
-        Title = title;
-        Author = author;
-        Description = description;
-        Publisher = publisher;
-        Isbn = isbn;
-        YearPublished = yearPublished;
-        AvailableCopies = availableCopies;
-        CategoryId = categoryId;
-        AddedBy = addedBy;
-        CreatedDt = createdDt;
-        ModifiedDt = modifiedDt;
-    }
-    
 }

@@ -4,7 +4,6 @@ import java.sql.Date;
 
 import javax.persistence.*;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,25 +14,25 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Student")
-public class Student 
+@Table(name = "IdentityPass")
+public class IdentityPass 
 {
     @Id
-    @OneToOne(mappedBy = "User")
-	@JoinColumn (name="Id")
-    private User StudentId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int Id;
 
-    @OneToOne
+    private String Password;
+
+    private boolean IsActive;
+
+    @ManyToOne
     @JoinColumn(name = "Id")
-    private StudentCategory Category;
+    private User Owner;
 
-    @OneToOne
-    @JoinColumn(name = "Id")
-    private Faculty StudentFaculty;
-
-    private int Year;
+    private int ValidTill;
 
     private Date CreatedDt;
 
     private Date ModifiedDt;
+    
 }
