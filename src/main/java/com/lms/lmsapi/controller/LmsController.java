@@ -1,8 +1,6 @@
 package com.lms.lmsapi.controller;
 
 import com.lms.lmsapi.entity.*;
-import com.lms.lmsapi.exception.*;
-import com.lms.lmsapi.repository.*;
 import com.lms.lmsapi.service.*;
 
 import lombok.AllArgsConstructor;
@@ -24,16 +22,26 @@ public class LmsController
 {
 
     private UserTypeService userTypeService;
+    private StudentCategoryService studentCategoryService;
 
     @Autowired
     public void setUserTypeService(UserTypeService UserTypeService) {this.userTypeService = UserTypeService;}
+    public void setStudentCategoryService(StudentCategoryService StudentCategoryService) { this.studentCategoryService = StudentCategoryService;}
 
-    @GetMapping(value = "/userTypes")
+    @GetMapping(value = "/usertypes")
     public ResponseEntity<List<UserType>> getAllUserTypes()
     {
         List<UserType> userTypes = userTypeService.getUserTypes();
 
         return new ResponseEntity<>(userTypes, HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/studentcategories")
+    public ResponseEntity<List<StudentCategory>> getStudentCategories()
+    {
+        List<StudentCategory> studentCategories = studentCategoryService.getStudentCategories();
+
+        return new ResponseEntity<>(studentCategories, HttpStatus.OK);
     }
     
 }
