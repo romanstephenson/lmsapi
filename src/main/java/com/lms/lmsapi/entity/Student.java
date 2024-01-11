@@ -2,8 +2,7 @@ package com.lms.lmsapi.entity;
 
 import java.sql.Date;
 
-import javax.persistence.*;
-
+import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,16 +18,17 @@ import lombok.NoArgsConstructor;
 public class Student 
 {
     @Id
-    @OneToOne(mappedBy = "User")
+    //@OneToOne(mappedBy = "User")
+    @OneToOne
 	@JoinColumn (name="Id")
     private User StudentId;
 
     @OneToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "Id",insertable = false, updatable = false)
     private StudentCategory Category;
 
     @OneToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "Id",insertable = false, updatable = false)
     private Faculty StudentFaculty;
 
     private int Year;

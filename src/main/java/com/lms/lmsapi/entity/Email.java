@@ -2,7 +2,7 @@ package com.lms.lmsapi.entity;
 
 import java.sql.Date;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 
 import lombok.AllArgsConstructor;
@@ -22,7 +22,7 @@ public class Email {
     private int Id;
 
     @ManyToOne
-	@JoinColumn (name="Id")
+	@JoinColumn (name="Id",insertable = false, updatable = false)
     private User UserId;
 
     private String EmailAddress;

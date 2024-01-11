@@ -2,7 +2,8 @@ package com.lms.lmsapi.entity;
 
 import java.sql.Date;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,8 +17,10 @@ import lombok.NoArgsConstructor;
 @Table(name = "Staff")
 
 public class Staff {
+    
+    //@OneToOne(mappedBy = "User")
     @Id
-    @OneToOne(mappedBy = "User")
+    @OneToOne
 	@JoinColumn (name="Id")
     private User StaffId;
 

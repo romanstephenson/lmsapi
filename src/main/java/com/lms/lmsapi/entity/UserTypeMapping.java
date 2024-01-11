@@ -1,15 +1,7 @@
 package com.lms.lmsapi.entity;
 import java.sql.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Table;
-
-import javax.persistence.OneToOne;
-
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
+import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -29,11 +21,13 @@ public class UserTypeMapping
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
 
-    @OneToOne(mappedBy = "User")
+    //@OneToOne(mappedBy = "User")
+    @OneToOne
     @JoinColumn(name="Id")
     private User user;
 
-    @OneToOne(mappedBy = "User_Type")
+    //@OneToOne(mappedBy = "User_Type")
+    @OneToOne
     @JoinColumn(name="Id")
     private UserType userType;
 

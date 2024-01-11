@@ -2,7 +2,7 @@ package com.lms.lmsapi.entity;
 
 import java.sql.Date;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 
 import lombok.AllArgsConstructor;

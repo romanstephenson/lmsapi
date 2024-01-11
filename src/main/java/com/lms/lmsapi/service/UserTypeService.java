@@ -1,8 +1,7 @@
 package com.lms.lmsapi.service;
+import com.lms.lmsapi.entity.UserType;
 
 import java.util.List;
-
-import com.lms.lmsapi.entity.UserType;
 
 public interface UserTypeService 
 {

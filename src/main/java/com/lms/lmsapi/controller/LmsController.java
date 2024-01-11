@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,9 +23,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class LmsController 
 {
 
-    private UserService UserService;
     private UserTypeService userTypeService;
-    private EmailService emailService;
+
+    @Autowired
+    public void setUserTypeService(UserTypeService UserTypeService) {this.userTypeService = UserTypeService;}
 
     @GetMapping(value = "/userTypes")
     public ResponseEntity<List<UserType>> getAllUserTypes()

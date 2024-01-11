@@ -2,12 +2,8 @@ package com.lms.lmsapi.entity;
 
 import java.sql.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Table;
+import jakarta.persistence.*;
 
-import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,16 +19,16 @@ public class UserType {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int Id;
+    private int Id;
 
-    public String Name;
+    private String Name;
 
-    public int Status;
+    private int Status;
 
-    public String Description;
+    private String Description;
 
-    public Date CreatedDt;
+    private Date CreatedDt;
 
-    public Date ModifiedDt;
+    private Date ModifiedDt;
 
 }

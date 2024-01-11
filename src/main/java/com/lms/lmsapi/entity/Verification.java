@@ -2,7 +2,7 @@ package com.lms.lmsapi.entity;
 
 import java.sql.Date;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -27,7 +27,7 @@ public class Verification
     private String VerificationToken;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "Id",insertable = false, updatable = false)
     private User Owner;
 
     private Date CreatedDt;

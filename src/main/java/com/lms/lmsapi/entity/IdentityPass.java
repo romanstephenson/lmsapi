@@ -2,7 +2,7 @@ package com.lms.lmsapi.entity;
 
 import java.sql.Date;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,7 +26,7 @@ public class IdentityPass
     private boolean IsActive;
 
     @ManyToOne
-    @JoinColumn(name = "Id")
+    @JoinColumn(name = "Id",insertable = false, updatable = false)
     private User Owner;
 
     private int ValidTill;
