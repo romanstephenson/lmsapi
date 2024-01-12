@@ -21,7 +21,7 @@ public class BookCategory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
 
-    private String CategoryName;
+    private String Category;
 
     private Date CreatedDt;
 

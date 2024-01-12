@@ -22,7 +22,7 @@ public class Faculty {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
 
-    private String FacultyName;
+    private String Facultyname;
 
     private Date CreatedDt;
 
