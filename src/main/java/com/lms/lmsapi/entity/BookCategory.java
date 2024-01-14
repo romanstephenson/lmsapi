@@ -19,12 +19,15 @@ public class BookCategory {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private int id;
 
-    private String Category;
+    @Column(nullable = false)
+    private String category;
 
-    private Date CreatedDt;
+    @Column(nullable = true)
+    private Date createdDt;
 
-    private Date ModifiedDt;
+    @Column(nullable = true)
+    private Date modifiedDt;
 
 }

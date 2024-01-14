@@ -5,30 +5,29 @@ import java.sql.Date;
 import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+//@data used to auto configure getters and setters automatically
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "User_Type")
-public class UserType {
+public class UserType 
+{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private int id;
 
-    private String Name;
+    private String name;
 
-    private int Status;
+    private int status;
 
-    private String Description;
+    private String description;
 
-    private Date CreatedDt;
+    private Date createdDt;
 
-    private Date ModifiedDt;
-
+    private Date modifiedDt;
 }

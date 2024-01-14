@@ -3,6 +3,9 @@ package com.lms.lmsapi.service;
 import com.lms.lmsapi.entity.UserType;
 import com.lms.lmsapi.exception.UserTypeNotFoundException;
 import com.lms.lmsapi.repository.UserTypeRepository;
+
+import lombok.AllArgsConstructor;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@AllArgsConstructor
 public class UserTypeServiceImpl implements UserTypeService
 {
     @Autowired

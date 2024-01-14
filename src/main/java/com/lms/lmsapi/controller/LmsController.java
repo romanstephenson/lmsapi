@@ -1,7 +1,7 @@
 package com.lms.lmsapi.controller;
 
 import com.lms.lmsapi.entity.*;
-import com.lms.lmsapi.exception.*;
+//import com.lms.lmsapi.exception.*;
 import com.lms.lmsapi.service.*;
 
 import lombok.AllArgsConstructor;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping(value = "/lmsapi/v1")
+@RequestMapping(value = "/lmsapi")
 public class LmsController 
 {
     private UserTypeService userTypeService;
@@ -32,8 +32,12 @@ public class LmsController
     public void setBookCategoryService(BookCategoryService BookCategoryService){this.bookCategoryService = BookCategoryService; }
     public void setFacultyService(FacultyService FacultyService){ this.facultyService = FacultyService;}
 
-
-    @GetMapping(value = "/usertypes")
+    
+    /**
+     * Get All userTypes defined in databsae
+     * @return List of Usertype
+     */
+    @GetMapping(value = "/v1/usertypes")
     public ResponseEntity<List<UserType>> getAllUserTypes()
     {
         List<UserType> userTypes = userTypeService.getUserTypes();
@@ -41,7 +45,13 @@ public class LmsController
         return new ResponseEntity<>(userTypes, HttpStatus.OK);
     }
 
-    @GetMapping(value = "/usertype/{id}")
+
+    /**
+     * Get a specific user type based on ID
+     * @param Id
+     * @return return usertype associated with ID passed in
+     */
+    @GetMapping(value = "/v1/usertype/{id}")
     public ResponseEntity<UserType> getUserType(@PathVariable("id")  int Id)
     {
         UserType userType = userTypeService.getUserType(Id);
@@ -49,7 +59,34 @@ public class LmsController
         return new ResponseEntity<>(userType, HttpStatus.OK);
     }
 
-    @GetMapping(value = "/studentcategories")
+
+    /**
+     * Create a user type
+     * @param userType
+     * @return
+     */
+    @PostMapping(value = "/v1/createusertype")
+    public ResponseEntity<UserType> createUserType(@RequestBody UserType userType)
+    {
+        System.out.println(userType);
+
+        if(userType != null)
+        {
+            UserType savedUserType = userTypeService.createUserType(userType);
+
+            return new ResponseEntity<>(savedUserType, HttpStatus.CREATED);
+        }
+
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        
+    }
+
+    
+    /**
+     * Get all student categories in DB
+     * @return returns a List of Student Categories
+     */
+    @GetMapping(value = "/v1/studentcategories")
     public ResponseEntity<List<StudentCategory>> getStudentCategories()
     {
         List<StudentCategory> studentCategories = studentCategoryService.getStudentCategories();
@@ -57,7 +94,7 @@ public class LmsController
         return new ResponseEntity<>(studentCategories, HttpStatus.OK);
     }
 
-    @GetMapping(value = "/studentcategory/{id}")
+    @GetMapping(value = "/v1/studentcategory/{id}")
     public ResponseEntity<StudentCategory> getStudentCategory(@PathVariable("id")  int Id)
     {
         StudentCategory studentCategory = studentCategoryService.getStudentCategory(Id);
@@ -65,7 +102,12 @@ public class LmsController
         return new ResponseEntity<>(studentCategory, HttpStatus.OK);
     }
     
-    @GetMapping(value = "/bookcategories")
+
+
+    /**Get all book categories
+     * @return returns a list of book categories of type BookCategory
+     */
+    @GetMapping(value = "/v1/bookcategories")
     public ResponseEntity<List<BookCategory>> getBookCategories()
     {
         
@@ -82,7 +124,7 @@ public class LmsController
         
     }
 
-    @GetMapping(value = "/bookcategory/{id}")
+    @GetMapping(value = "/v1/bookcategory/{id}")
     public ResponseEntity<BookCategory> getBookCategory(@PathVariable("id")  int Id)
     {
         BookCategory bookCategory = bookCategoryService.getBookCategory(Id);
@@ -98,7 +140,24 @@ public class LmsController
     }
 
 
-    @GetMapping(value = "/faculties")
+    @PostMapping(value = "/v1/createbookcategory")
+    public ResponseEntity<BookCategory> createBookCategory(@RequestBody BookCategory bookCategory)
+    {
+        System.out.println(bookCategory);
+
+        if(bookCategory != null)
+        {
+            BookCategory savedBookCategory = bookCategoryService.createBookCategory(bookCategory);
+
+            return new ResponseEntity<>(savedBookCategory, HttpStatus.CREATED);
+        }
+
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        
+    }
+
+
+    @GetMapping(value = "/v1/faculties")
     public ResponseEntity<List<Faculty>> getFaculties()
     {
         try
@@ -113,7 +172,7 @@ public class LmsController
         }
     }
 
-    @GetMapping(value = "/faculty/{id}")
+    @GetMapping(value = "/v1/faculty/{id}")
     public ResponseEntity<Faculty> getFaculty(@PathVariable("id") int Id)
     {
         Faculty faculty = facultyService.getFaculty(Id);
