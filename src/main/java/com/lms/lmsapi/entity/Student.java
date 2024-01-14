@@ -18,22 +18,21 @@ import lombok.NoArgsConstructor;
 public class Student 
 {
     @Id
-    //@OneToOne(mappedBy = "User")
     @OneToOne
-	@JoinColumn (name="Id")
-    private User StudentId;
-
-    @OneToOne
-    @JoinColumn(name = "Id",insertable = false, updatable = false)
-    private StudentCategory Category;
+	@JoinColumn (name="Id",insertable = false, updatable = false)
+    private User studentId;
 
     @OneToOne
     @JoinColumn(name = "Id",insertable = false, updatable = false)
-    private Faculty StudentFaculty;
+    private StudentCategory category;
 
-    private int Year;
+    @OneToOne
+    @JoinColumn(name = "Id",insertable = false, updatable = false)
+    private Faculty studentFaculty;
 
-    private Date CreatedDt;
+    private int year;
 
-    private Date ModifiedDt;
+    private Date createdDt;
+
+    private Date modifiedDt;
 }

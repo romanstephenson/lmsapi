@@ -19,17 +19,17 @@ import lombok.NoArgsConstructor;
 public class Email {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private int id;
 
     @ManyToOne
 	@JoinColumn (name="Id",insertable = false, updatable = false)
-    private User UserId;
+    private User userId;
 
-    private String EmailAddress;
+    private String emailAddress;
 
-    private int IsPrimary;
+    private int isPrimary;
 
-    private Date CreatedDt;
+    private Date createdDt;
 
-    private Date ModifiedDt;
+    private Date modifiedDt;
 }

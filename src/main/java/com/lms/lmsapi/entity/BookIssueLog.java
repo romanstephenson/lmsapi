@@ -19,23 +19,23 @@ public class BookIssueLog
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private int id;
 
     @ManyToOne
-    @JoinColumn (name="BookId")
+    @JoinColumn (name="BookId",insertable = false, updatable = false)
     private Book book;
 
     @ManyToOne
-    @JoinColumn (name="StudentId")
-    private Student IssuedTo;
+    @JoinColumn (name="StudentId",insertable = false, updatable = false)
+    private Student issuedTo;
 
     @ManyToOne
-    @JoinColumn(name = "StaffId")
-    private Staff IssuedBy;
+    @JoinColumn(name = "StaffId",insertable = false, updatable = false)
+    private Staff issuedBy;
 
-    private Date IssueDt;
+    private Date issueDt;
 
-    private Date ReturnDt;
+    private Date returnDt;
 
-    private Date ModifiedDt;
+    private Date modifiedDt;
 }

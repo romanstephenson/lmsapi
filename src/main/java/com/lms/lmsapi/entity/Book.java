@@ -20,21 +20,21 @@ public class Book
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int BookId;
+    private int bookId;
 
-    private String Title;
+    private String title;
 
-    private String Author;
+    private String author;
 
-    private String Description;
+    private String description;
 
-    private String Publisher;
+    private String publisher;
 
-    private String Isbn;
+    private String isbn;
 
-    private Date YearPublished;
+    private Date yearPublished;
 
-    private int AvailableCopies;
+    private int availableCopies;
 
     @OneToOne
     @JoinColumn(name = "Id",insertable = false, updatable = false)
@@ -42,10 +42,9 @@ public class Book
 
     @OneToOne
     @JoinColumn(name = "Id",insertable = false, updatable = false)
-    private User AddedBy;
+    private User addedBy;
 
-    private Date CreatedDt;
+    private Date createdDt;
 
-    private Date ModifiedDt;
-
+    private Date modifiedDt;
 }

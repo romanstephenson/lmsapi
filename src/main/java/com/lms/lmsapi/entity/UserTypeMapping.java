@@ -19,7 +19,7 @@ public class UserTypeMapping
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private int id;
 
     //@OneToOne(mappedBy = "User")
     @OneToOne
@@ -31,7 +31,7 @@ public class UserTypeMapping
     @JoinColumn(name="Id")
     private UserType userType;
 
-    private Date CreatedDt;
+    private Date createdDt;
 
-    private Date ModifiedDt;
+    private Date modifiedDt;
 }

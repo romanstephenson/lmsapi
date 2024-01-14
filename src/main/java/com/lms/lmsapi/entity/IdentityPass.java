@@ -19,20 +19,20 @@ public class IdentityPass
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private int id;
 
-    private String Password;
+    private String password;
 
-    private boolean IsActive;
+    private boolean isActive;
 
     @ManyToOne
     @JoinColumn(name = "Id",insertable = false, updatable = false)
-    private User Owner;
+    private User owner;
 
-    private int ValidTill;
+    private int validTill;
 
-    private Date CreatedDt;
+    private Date createdDt;
 
-    private Date ModifiedDt;
+    private Date modifiedDt;
     
 }

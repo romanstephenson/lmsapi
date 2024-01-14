@@ -21,16 +21,16 @@ public class Staff {
     //@OneToOne(mappedBy = "User")
     @Id
     @OneToOne
-	@JoinColumn (name="Id")
+	@JoinColumn (name="Id",insertable = false, updatable = false)
     private User StaffId;
 
-    private String Department;
+    private String department;
 
-    private Date HireStartDt;
+    private Date hireStartDt;
 
-    private Date HireEndDt;
+    private Date hireEndDt;
 
-    private Date CreatedDt;
+    private Date createdDt;
 
-    private Date ModifiedDt;
+    private Date modifiedDt;
 }

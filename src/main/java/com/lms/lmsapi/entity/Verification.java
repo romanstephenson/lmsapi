@@ -20,18 +20,18 @@ public class Verification
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private int id;
 
-    private int VerificationStatus;
+    private int verificationStatus;
 
-    private String VerificationToken;
+    private String verificationToken;
 
     @ManyToOne
     @JoinColumn(name = "Id",insertable = false, updatable = false)
-    private User Owner;
+    private User owner;
 
-    private Date CreatedDt;
+    private Date createdDt;
 
-    private Date VerifiedDt;
+    private Date verifiedDt;
     
 }

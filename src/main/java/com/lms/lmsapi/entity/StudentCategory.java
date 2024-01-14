@@ -21,14 +21,14 @@ public class StudentCategory
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int CatId;
+    private int catId;
 
-    private String Category;
+    private String category;
 
-    private int MaxAllowed;
+    private int maxAllowed;
 
-    private Date CreatedDt;
+    private Date createdDt;
 
-    private Date ModifiedDt;
+    private Date modifiedDt;
 }
  

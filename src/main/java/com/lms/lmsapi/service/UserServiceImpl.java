@@ -16,7 +16,7 @@ import java.util.Optional;
 @Service
 @AllArgsConstructor
 public class UserServiceImpl implements UserService 
-{
+{ 
     @Autowired
     private UserRepository userRepository;
     //private EmailRepository emailRepository;
@@ -43,12 +43,14 @@ public class UserServiceImpl implements UserService
     }
 
     @Override
-    public User createUser(User user)
+    public User createUser(User user )
     {
+        
         if (user != null) 
         {
-            return userRepository.save(user);    
-        } else {
+            return userRepository.save(user);            
+        } 
+        else {
             throw new UserNotFoundException("User not found");
         }
         
@@ -65,12 +67,12 @@ public class UserServiceImpl implements UserService
         existingUser.setUsername(user.getUsername());
         existingUser.setDob(user.getDob());
         existingUser.setGender(user.getGender());
-        existingUser.setEmail(user.getEmail());
         existingUser.setChangePass(user.getChangePass());
         existingUser.setIsActive(user.getIsActive());
         existingUser.setModifiedDt(user.getModifiedDt());
 
         User updatedUser = userRepository.save(existingUser);
+
 
         return updatedUser;
     }
