@@ -36,7 +36,7 @@ public class UserTypeServiceImpl implements UserTypeService
         }
         else
         {
-            throw new UserTypeNotFoundException("UserType Not Found");
+            throw new UserTypeNotFoundException("UserType Not Found with id: " + id);
         }
     }
 

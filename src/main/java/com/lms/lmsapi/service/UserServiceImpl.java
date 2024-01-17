@@ -1,8 +1,8 @@
 package com.lms.lmsapi.service;
 
 import com.lms.lmsapi.entity.User;
+import com.lms.lmsapi.exception.EmailNotFoundException;
 import com.lms.lmsapi.exception.UserNotFoundException;
-//import com.lms.lmsapi.repository.EmailRepository;
 import com.lms.lmsapi.repository.UserRepository;
 
 import lombok.AllArgsConstructor;
@@ -28,8 +28,13 @@ public class UserServiceImpl implements UserService
     }
     
     @Override
-    public User getUserById(int id)
+    public User getUserById(Long id)
     {
+         if( id == null)
+        {
+            throw new EmailNotFoundException("User Id can not be empty or null.");
+        }
+
         Optional<User> optionalUser = userRepository.findById(id);
 
         if( optionalUser.isPresent())
@@ -59,27 +64,34 @@ public class UserServiceImpl implements UserService
     @Override
     public User updateUser(User user)
     {
-        User existingUser = userRepository.findById(user.getId()).get();
+        if( user.getId() != null)
+        {
+            User existingUser = userRepository.findById(user.getId().longValue()).get();
 
-        existingUser.setFirstname(user.getFirstname());
-        existingUser.setLastname(user.getLastname());
-        existingUser.setMiddlename(user.getMiddlename());
-        existingUser.setUsername(user.getUsername());
-        existingUser.setDob(user.getDob());
-        existingUser.setGender(user.getGender());
-        existingUser.setChangePass(user.getChangePass());
-        existingUser.setIsActive(user.getIsActive());
-        existingUser.setModifiedDt(user.getModifiedDt());
+            existingUser.setFirstname(user.getFirstname());
+            existingUser.setLastname(user.getLastname());
+            existingUser.setMiddlename(user.getMiddlename());
+            existingUser.setUsername(user.getUsername());
+            existingUser.setDob(user.getDob());
+            existingUser.setGender(user.getGender());
+            existingUser.setChangePass(user.getChangePass());
+            existingUser.setIsActive(user.getIsActive());
+            existingUser.setModifiedDt(user.getModifiedDt());
 
-        User updatedUser = userRepository.save(existingUser);
+            User updatedUser = userRepository.save(existingUser);
 
+            return updatedUser;
+        }
 
-        return updatedUser;
+        throw new UserNotFoundException("User Id can not be empty or null.");
     }
 
     @Override
-    public void deleteUser(int id)
+    public void deleteUser(Long id)
     {
-        userRepository.deleteById(id);
+        if(id != null)
+        {
+            userRepository.deleteById(id);
+        }
     }
 }

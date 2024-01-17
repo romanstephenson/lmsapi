@@ -26,8 +26,14 @@ public class EmailServiceImpl implements EmailService
     }
 
     @Override
-    public Email getEmailByUserId(int userId)
+    public Email getEmailByUserId(Long userId)
     {
+        
+        if( userId == null)
+        {
+            throw new EmailNotFoundException("User Id can not be empty or null.");
+        }
+
         Optional<Email> optionalEmail = emailRepository.findById(userId);
 
         if(optionalEmail.isPresent())
@@ -55,22 +61,32 @@ public class EmailServiceImpl implements EmailService
     @Override
     public Email updateEmailByUserId(Email email)
     {
-        Email existingEmailForUser = emailRepository.findById(email.getId()).get();
 
-        existingEmailForUser.setEmailAddress(email.getEmailAddress());
-        existingEmailForUser.setIsPrimary(email.getIsPrimary());
-        existingEmailForUser.setUserId(email.getUserId());
-        existingEmailForUser.setModifiedDt(email.getModifiedDt());
+        if( email.getId() != null)
+        {
+            Email existingEmailForUser = emailRepository.findById(email.getId().longValue()).get();
 
-        Email updatedEmail = emailRepository.save(existingEmailForUser);
+            existingEmailForUser.setEmailAddress(email.getEmailAddress());
+            existingEmailForUser.setIsPrimary(email.getIsPrimary());
+            existingEmailForUser.setUser(email.getUser());
+            existingEmailForUser.setModifiedDt(email.getModifiedDt());
 
-        return updatedEmail;
+            Email updatedEmail = emailRepository.save(existingEmailForUser);
+
+            return updatedEmail;
+            
+        }
+
+        throw new EmailNotFoundException("User Id can not be empty or null.");
 
     }
 
     @Override
-    public void deleteUserEmail(int id)
+    public void deleteUserEmail(Long id)
     {
-        emailRepository.deleteById(id);
+        if(id != null)
+        {
+            emailRepository.deleteById(id);
+        }
     }
 }
