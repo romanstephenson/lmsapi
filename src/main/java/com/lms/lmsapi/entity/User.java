@@ -1,20 +1,20 @@
 package com.lms.lmsapi.entity;
 
+import java.io.Serializable;
 import java.sql.Date;
+
 import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "[User]")
-public class User {
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

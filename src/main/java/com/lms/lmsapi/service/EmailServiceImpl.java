@@ -68,7 +68,7 @@ public class EmailServiceImpl implements EmailService
 
             existingEmailForUser.setEmailAddress(email.getEmailAddress());
             existingEmailForUser.setIsPrimary(email.getIsPrimary());
-            existingEmailForUser.setUser(email.getUser());
+            existingEmailForUser.setUserId(email.getUserId());
             existingEmailForUser.setModifiedDt(email.getModifiedDt());
 
             Email updatedEmail = emailRepository.save(existingEmailForUser);
