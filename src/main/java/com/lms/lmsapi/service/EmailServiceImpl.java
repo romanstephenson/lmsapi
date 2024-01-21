@@ -62,13 +62,13 @@ public class EmailServiceImpl implements EmailService
     public Email updateEmailByUserId(Email email)
     {
 
-        if( email.getId() != null)
+        if( email.getEmailid() != null)
         {
-            Email existingEmailForUser = emailRepository.findById(email.getId().longValue()).get();
+            Email existingEmailForUser = emailRepository.findById(email.getEmailid().longValue()).get();
 
             existingEmailForUser.setEmailAddress(email.getEmailAddress());
             existingEmailForUser.setIsPrimary(email.getIsPrimary());
-            existingEmailForUser.setUserId(email.getUserId());
+            existingEmailForUser.setUserid(email.getUserid());
             existingEmailForUser.setModifiedDt(email.getModifiedDt());
 
             Email updatedEmail = emailRepository.save(existingEmailForUser);

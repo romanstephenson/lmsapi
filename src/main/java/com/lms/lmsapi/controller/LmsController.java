@@ -7,7 +7,6 @@ import com.lms.lmsapi.service.*;
 import lombok.AllArgsConstructor;
 
 import java.util.List;
- 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,10 +28,15 @@ public class LmsController
 
     @Autowired
     public void setUserTypeService(UserTypeService UserTypeService) {this.userTypeService = UserTypeService; }
+    @Autowired
     public void setStudentCategoryService(StudentCategoryService StudentCategoryService) { this.studentCategoryService = StudentCategoryService; }
+    @Autowired
     public void setBookCategoryService(BookCategoryService BookCategoryService){this.bookCategoryService = BookCategoryService; }
+    @Autowired
     public void setFacultyService(FacultyService FacultyService){ this.facultyService = FacultyService;}
+    @Autowired
     public void setUserService(UserService UserService){ this.userService = UserService; }
+    @Autowired
     public void setEmailService(EmailService EmailService){ this.emailService = EmailService; }
 
     
@@ -121,6 +125,7 @@ public class LmsController
     @PostMapping(value = "/v1/createuseremail")
     public ResponseEntity<Email> createEmail(@RequestBody Email email) 
     {
+        System.out.println(email);
         
         if(email != null)
         {

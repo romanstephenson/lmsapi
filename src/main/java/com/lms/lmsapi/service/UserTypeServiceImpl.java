@@ -4,6 +4,7 @@ import com.lms.lmsapi.entity.UserType;
 import com.lms.lmsapi.exception.UserTypeNotFoundException;
 import com.lms.lmsapi.repository.UserTypeRepository;
 
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 @AllArgsConstructor
 public class UserTypeServiceImpl implements UserTypeService
 {

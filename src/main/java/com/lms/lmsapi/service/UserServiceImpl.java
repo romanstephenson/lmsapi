@@ -1,7 +1,6 @@
 package com.lms.lmsapi.service;
 
 import com.lms.lmsapi.entity.User;
-import com.lms.lmsapi.exception.EmailNotFoundException;
 import com.lms.lmsapi.exception.UserNotFoundException;
 import com.lms.lmsapi.repository.UserRepository;
 
@@ -32,7 +31,7 @@ public class UserServiceImpl implements UserService
     {
          if( id == null)
         {
-            throw new EmailNotFoundException("User Id can not be empty or null.");
+            throw new UserNotFoundException("User Id can not be empty or null.");
         }
 
         Optional<User> optionalUser = userRepository.findById(id);
@@ -64,9 +63,9 @@ public class UserServiceImpl implements UserService
     @Override
     public User updateUser(User user)
     {
-        if( user.getId() != null)
+        if( user.getUserid() != null)
         {
-            User existingUser = userRepository.findById(user.getId().longValue()).get();
+            User existingUser = userRepository.findById(user.getUserid().longValue()).get();
 
             existingUser.setFirstname(user.getFirstname());
             existingUser.setLastname(user.getLastname());
