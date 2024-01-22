@@ -2,20 +2,32 @@ package com.lms.lmsapi.entity;
 
 import java.sql.Date;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.*;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "Book_Category")
 public class BookCategory {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int Id;
+    private int id;
 
-    public String Category;
+    @Column(nullable = false)
+    private String category;
 
-    public Date CreatedDt;
+    @Column(nullable = true)
+    private Date createdDt;
 
-    public Date ModifiedDt;
+    @Column(nullable = true)
+    private Date modifiedDt;
 
 }

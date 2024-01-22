@@ -2,19 +2,29 @@ package com.lms.lmsapi.entity;
 
 import java.sql.Date;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.*;
 
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "Faculty")
 public class Faculty {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int Id;
+    private Long facultyid;
 
-    public String FacultyName;
+    private String facultyname;
 
-    public Date CreatedDt;
+    private Date createdDt;
 
-    public Date ModifiedDt;
+    private Date modifiedDt;
 }

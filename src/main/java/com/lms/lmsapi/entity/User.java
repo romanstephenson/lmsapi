@@ -1,41 +1,56 @@
 package com.lms.lmsapi.entity;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import jakarta.persistence.*;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 
 @Entity
-public class User {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "Users")
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    @JsonProperty("userid")
+    private Long userid;
 
-    public String Firstname ;
+    @Column(nullable = false)
+    private String firstname;
 
-    public String Middlename;
+    @Column(nullable = false)
+    private String middlename;
 
-    public String Lastname;
+    @Column(nullable = false)
+    private String lastname;
 
-    public String Username;
+    @Column(nullable = false)
+    private String username;
 
-    public Date Dob;
+    @Column(nullable = false)
+    private Date dob;
 
-    public String Gender;
+    @Column(nullable = false)
+    private String gender;
 
-    public int ChangePass;
+    @Column(nullable = false)
+    private int changePass;
 
-    public int IsActive;
+    @Column(nullable = false)
+    private int isActive;
 
-    public Date CreatedDt; 
+    @Column(nullable = true)
+    private Date createdDt; 
 
-    public Date ModifiedDt;
-
-    @ManyToOne
-    @JoinColumn(name="UserId")
-    public Email Email;
-
-    @OneToOne
-    @JoinColumn(name = "Id")
-    public UserType UserType;
+    @Column(nullable = true)
+    private Date modifiedDt;
 
 }

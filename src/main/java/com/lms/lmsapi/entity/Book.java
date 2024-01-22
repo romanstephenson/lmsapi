@@ -2,43 +2,49 @@ package com.lms.lmsapi.entity;
 
 import java.sql.Date;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import jakarta.persistence.*;
 
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-public class Book {
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "Book")
+public class Book 
+{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int BookId;
+    private int bookId;
 
-    public String Title;
+    private String title;
 
-    public String Author;
+    private String author;
 
-    public String Description;
+    private String description;
 
-    public String Publisher;
+    private String publisher;
 
-    public String Isbn;
+    private String isbn;
 
-    public Date YearPublished;
+    private Date yearPublished;
 
-    public int AvailableCopies;
-
-    @OneToOne
-    @JoinColumn(name = "Id")
-    public BookCategory CategoryId;
+    private int availableCopies;
 
     @OneToOne
-    @JoinColumn(name = "Id")
-    public User AddedBy;
+    @JoinColumn(name = "Id",insertable = false, updatable = false)
+    private BookCategory bookCategory;
 
-    public Date CreatedDt;
+    @OneToOne
+    @JoinColumn(name = "Id",insertable = false, updatable = false)
+    private User addedBy;
 
-    public Date ModifiedDt;
-    
+    private Date createdDt;
+
+    private Date modifiedDt;
 }

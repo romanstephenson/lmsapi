@@ -2,30 +2,37 @@ package com.lms.lmsapi.entity;
 
 import java.sql.Date;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.*;
 
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "Student")
 public class Student 
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int StudentId;
+    @OneToOne
+	@JoinColumn (name="userid",insertable = false, updatable = false)
+    private User studentId;
 
     @OneToOne
-    @JoinColumn(name = "Id")
-    public StudentCategory Category;
+    @JoinColumn(name = "catid",insertable = false, updatable = false)
+    private StudentCategory category;
 
     @OneToOne
-    @JoinColumn(name = "Id")
-    public Faculty StudentFaculty;
+    @JoinColumn(name = "facultyid",insertable = false, updatable = false)
+    private Faculty studentFaculty;
 
-    public int Year;
+    private int year;
 
-    public Date CreatedDt;
+    private Date createdDt;
 
-    public Date ModifiedDt;
+    private Date modifiedDt;
 }

@@ -1,21 +1,50 @@
 package com.lms.lmsapi.entity;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-public class Email {
+import jakarta.persistence.*;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"userid",
+"emailAddress",
+"isPrimary",
+"createdDt",
+"modifiedDt"
+})
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "Email")
+public class Email implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int Id;
+    private Long emailid;
 
-    public int UserId;
+    @ManyToOne
+    @JsonProperty("userid")
+	@JoinColumn (name="userid", updatable = false)
+    private User userid;
 
-    public String EmailAddress;
+    @Column(nullable = false)
+    private String emailAddress; 
 
-    public byte IsPrimary;
+    @Column(nullable = false)
+    private Long isPrimary;
 
-    public Date CreatedDt;
+    @Column(nullable = true)
+    private Date createdDt;
 
-    public Date ModifiedDt;
+    @Column(nullable = true)
+    private Date modifiedDt;
 }

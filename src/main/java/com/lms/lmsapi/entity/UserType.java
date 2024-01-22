@@ -2,25 +2,32 @@ package com.lms.lmsapi.entity;
 
 import java.sql.Date;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import jakarta.persistence.*;
 
-import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-public class UserType {
+//@data used to auto configure getters and setters automatically
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "User_Type")
+public class UserType 
+{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int Id;
+    private Long usertypeid;
 
-    public String Name;
+    private String name;
 
-    public int Status;
+    private int status;
 
-    public String Description;
+    private String description;
 
-    public Date CreatedDt;
+    private Date createdDt;
 
-    public Date ModifiedDt;
-
+    private Date modifiedDt;
 }
