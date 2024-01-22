@@ -19,16 +19,14 @@ public class UserTypeMapping
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long usertypemappingid;
 
-    //@OneToOne(mappedBy = "User")
     @OneToOne
-    @JoinColumn(name="Id")
-    private User user;
+    @JoinColumn(name="userid")
+    private User userId;
 
-    //@OneToOne(mappedBy = "User_Type")
     @OneToOne
-    @JoinColumn(name="Id")
+    @JoinColumn(name="usertypeid")
     private UserType userType;
 
     private Date createdDt;

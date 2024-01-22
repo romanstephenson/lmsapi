@@ -20,11 +20,11 @@ public class Faculty {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private Long facultyid;
 
-    private String Facultyname;
+    private String facultyname;
 
-    private Date CreatedDt;
+    private Date createdDt;
 
-    private Date ModifiedDt;
+    private Date modifiedDt;
 }

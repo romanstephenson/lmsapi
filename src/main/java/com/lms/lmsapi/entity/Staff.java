@@ -21,8 +21,8 @@ public class Staff {
     //@OneToOne(mappedBy = "User")
     @Id
     @OneToOne
-	@JoinColumn (name="Id",insertable = false, updatable = false)
-    private User StaffId;
+	@JoinColumn (name="userid",insertable = false, updatable = false)
+    private User staffId;
 
     private String department;
 

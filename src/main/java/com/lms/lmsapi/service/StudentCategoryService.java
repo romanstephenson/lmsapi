@@ -7,8 +7,8 @@ import com.lms.lmsapi.entity.StudentCategory;
 public interface StudentCategoryService 
 {
     List<StudentCategory> getStudentCategories();
-    StudentCategory getStudentCategory(int id);
+    StudentCategory getStudentCategory(Long id);
     StudentCategory createStudentCategory(StudentCategory studentCategory);
     StudentCategory updateUserType(StudentCategory studentCategory);
-    void deleteStudentCategory(int categoryId);
+    void deleteStudentCategory(Long categoryId);
 } 

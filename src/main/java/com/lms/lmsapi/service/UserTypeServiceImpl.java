@@ -28,7 +28,7 @@ public class UserTypeServiceImpl implements UserTypeService
     }
 
     @Override
-    public UserType getUserType(int id)
+    public UserType getUserType(Long id)
     {
         Optional<UserType> optionalUserType = userTypeRepository.findById(id);
 
@@ -57,7 +57,7 @@ public class UserTypeServiceImpl implements UserTypeService
     @Override
     public UserType updateUserType(UserType userType)
     {
-        UserType existingUserType = userTypeRepository.findById(userType.getId()).get();
+        UserType existingUserType = userTypeRepository.findById(userType.getUsertypeid()).get();
 
         existingUserType.setName(userType.getName());
         existingUserType.setStatus(userType.getStatus());
@@ -71,7 +71,7 @@ public class UserTypeServiceImpl implements UserTypeService
     }
 
     @Override
-    public void deleteUserType(int userTypeId)
+    public void deleteUserType(Long userTypeId)
     {
         userTypeRepository.deleteById(userTypeId);
     }

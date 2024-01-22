@@ -19,14 +19,14 @@ public class IdentityPass
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private String password;
 
     private boolean isActive;
 
     @ManyToOne
-    @JoinColumn(name = "Id",insertable = false, updatable = false)
+    @JoinColumn(name = "userid",insertable = false, updatable = false)
     private User owner;
 
     private int validTill;

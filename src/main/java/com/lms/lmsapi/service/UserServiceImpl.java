@@ -10,11 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @AllArgsConstructor
-public class UserServiceImpl implements UserService 
+public class UserServiceImpl implements UserService
 { 
     @Autowired
     private UserRepository userRepository;
@@ -26,25 +25,18 @@ public class UserServiceImpl implements UserService
         return ( List<User>) userRepository.findAll();
     }
     
+    
     @Override
     public User getUserById(Long id)
     {
-         if( id == null)
-        {
-            throw new UserNotFoundException("User Id can not be empty or null.");
-        }
+        // Optional<User> optionalUser = userRepository.findById(id);
 
-        Optional<User> optionalUser = userRepository.findById(id);
+        // return optionalUser.get();
 
-        if( optionalUser.isPresent())
-        {
-            return optionalUser.get();
-        }
-        else
-        {
-            throw new UserNotFoundException("User Not Found");
-        }
+        return userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id) );
     }
+
+    
 
     @Override
     public User createUser(User user )

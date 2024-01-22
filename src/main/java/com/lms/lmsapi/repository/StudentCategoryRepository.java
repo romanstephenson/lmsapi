@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.lms.lmsapi.entity.StudentCategory;
 
 @Repository
-public interface StudentCategoryRepository extends JpaRepository<StudentCategory, Integer>{
+public interface StudentCategoryRepository extends JpaRepository<StudentCategory, Long>{
     
 }

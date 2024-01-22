@@ -21,7 +21,7 @@ public class StudentCategory
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int catId;
+    private Long catid;
 
     private String category;
 

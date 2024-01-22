@@ -19,7 +19,7 @@ public class UserType
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long usertypeid;
 
     private String name;
 

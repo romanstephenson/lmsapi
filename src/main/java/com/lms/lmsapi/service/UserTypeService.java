@@ -6,8 +6,8 @@ import java.util.List;
 public interface UserTypeService 
 {
     List<UserType> getUserTypes();
-    UserType getUserType(int id);
+    UserType getUserType(Long id);
     UserType createUserType(UserType userType);
     UserType updateUserType(UserType userType);
-    void deleteUserType(int userTypeId);
+    void deleteUserType(Long userTypeId);
 }

@@ -1,7 +1,6 @@
 package com.lms.lmsapi.controller;
 
 import com.lms.lmsapi.entity.*;
-//import com.lms.lmsapi.exception.*;
 import com.lms.lmsapi.service.*;
 
 import lombok.AllArgsConstructor;
@@ -64,13 +63,13 @@ public class LmsController
      * @return return usertype associated with ID passed in
      */
     @GetMapping(value = "/v1/usertype/{id}")
-    public ResponseEntity<UserType> getUserType(@PathVariable("id")  int Id)
+    public ResponseEntity<UserType> getUserType(@PathVariable("id")  Long Id)
     {
         UserType userType = userTypeService.getUserType(Id);
 
         if(userType == null)
         {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
         return new ResponseEntity<>(userType, HttpStatus.OK);
@@ -99,6 +98,42 @@ public class LmsController
     }
 
 
+    /**
+     * Get All users defined in databsae
+     * @return List of Users
+     */
+    @GetMapping(value = "/v1/users")
+    public ResponseEntity<List<User>> getAllUsers()
+    {
+        List<User> users = userService.getUsers();
+
+        if(users.isEmpty())
+        {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity<>(users, HttpStatus.OK);
+    }
+
+
+    /**
+     * Get a specific user based on ID
+     * @param Id
+     * @return return user associated with ID passed in
+     */
+    @GetMapping(value = "/v1/user/{id}")
+    public ResponseEntity<User> getUser(@PathVariable("id")  Long Id)
+    {
+        User user = userService.getUserById(Id);
+
+        if(user == null)
+        {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        return new ResponseEntity<>(user, HttpStatus.OK);
+    }
+
 
     /** Creates a user
      * @param user
@@ -116,6 +151,7 @@ public class LmsController
 
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
+
 
     
     /** Creates an email address for a user
@@ -138,6 +174,28 @@ public class LmsController
         
     }
     
+    /** updates an existing email address for a user
+     * @param email
+     * @return returns updated email object
+     */
+    @PutMapping(value = "/v1/updateuseremail/{id}")
+    public ResponseEntity<Email> updateEmail(@RequestBody Email email, @PathVariable("id") Long id) 
+    {
+        System.out.println(email);
+        
+        if(email != null || id > 0)
+        {
+            email.setEmailid(id);
+
+            Email updatedEmail = emailService.updateEmailByUserId(email);
+
+            return new ResponseEntity<>(updatedEmail, HttpStatus.OK);
+        }
+
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        
+    }
+    
 
     
     /**
@@ -151,7 +209,7 @@ public class LmsController
 
         if(studentCategories.isEmpty())
         {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
         return new ResponseEntity<>(studentCategories, HttpStatus.OK);
@@ -163,7 +221,7 @@ public class LmsController
      * @return StudentCategory object
      */
     @GetMapping(value = "/v1/studentcategory/{id}")
-    public ResponseEntity<StudentCategory> getStudentCategory(@PathVariable("id")  int Id)
+    public ResponseEntity<StudentCategory> getStudentCategory(@PathVariable("id")  Long Id)
     {
         if(Id > 0 )
         {
@@ -172,7 +230,7 @@ public class LmsController
             return new ResponseEntity<>(studentCategory, HttpStatus.OK);
         }
         
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
     
 
@@ -187,7 +245,7 @@ public class LmsController
 
         if(bookCategories.isEmpty())
         {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         
         return new ResponseEntity<>(bookCategories, HttpStatus.OK);
@@ -245,7 +303,7 @@ public class LmsController
 
         if(faculties.isEmpty())
         {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
         return new ResponseEntity<>(faculties, HttpStatus.OK);
@@ -257,7 +315,7 @@ public class LmsController
      * @return returns a Facult object
      */
     @GetMapping(value = "/v1/faculty/{id}")
-    public ResponseEntity<Faculty> getFaculty(@PathVariable("id") int Id)
+    public ResponseEntity<Faculty> getFaculty(@PathVariable("id") Long Id)
     {
         Faculty faculty = facultyService.getFaculty(Id);
 
@@ -268,5 +326,23 @@ public class LmsController
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             
         }
+    }
+
+    
+    /**Create faculty
+     * @return List of Faculty Objects
+     */
+    @PostMapping(value = "/v1/createfaculty")
+    public ResponseEntity<Faculty> createFaculty(@RequestBody Faculty faculty)
+    {
+
+        if(faculty != null)
+        {
+            Faculty savedFaculty = facultyService.createFaculty(faculty);
+
+            return new ResponseEntity<>(savedFaculty,HttpStatus.CREATED);
+        }
+
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 }

@@ -23,7 +23,7 @@ public class StudentCategoryServiceImpl implements StudentCategoryService
     }
 
     @Override
-    public StudentCategory getStudentCategory(int id)
+    public StudentCategory getStudentCategory(Long id)
     {
         Optional<StudentCategory> optionalStudentCategory = studentCategoryRepository.findById(id);
 
@@ -52,7 +52,7 @@ public class StudentCategoryServiceImpl implements StudentCategoryService
     @Override
     public StudentCategory updateUserType(StudentCategory studentCategory)
     {
-        StudentCategory existingStudentCategory = studentCategoryRepository.findById(studentCategory.getCatId()).get();
+        StudentCategory existingStudentCategory = studentCategoryRepository.findById(studentCategory.getCatid()).get();
 
         existingStudentCategory.setCategory(studentCategory.getCategory() );
         existingStudentCategory.setMaxAllowed(studentCategory.getMaxAllowed() );
@@ -65,7 +65,7 @@ public class StudentCategoryServiceImpl implements StudentCategoryService
     }
 
     @Override
-    public void deleteStudentCategory(int studentCategoryId)
+    public void deleteStudentCategory(Long studentCategoryId)
     {
         studentCategoryRepository.deleteById(studentCategoryId);
     }

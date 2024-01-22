@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.lms.lmsapi.entity.Faculty;
 import com.lms.lmsapi.exception.FacultyNotFoundException;
-import com.lms.lmsapi.exception.FacultyRepository;
+import com.lms.lmsapi.repository.FacultyRepository;
 
 import java.util.List;
 
@@ -24,20 +24,14 @@ public class FacultyServiceImpl implements FacultyService {
     }
 
     @Override
-    public Faculty createFaculty(Faculty faculty)
+    public Faculty createFaculty( Faculty faculty)
     {
-        if (faculty != null) 
-        {
-            return facultyRepository.save(faculty);
+        return facultyRepository.save(faculty);
             
-        }
-        else{
-            throw new FacultyNotFoundException("Faculty object not created correctly.");
-        }
     }
 
     @Override
-    public Faculty getFaculty(int FacultyId)
+    public Faculty getFaculty(Long FacultyId)
     {
         Optional<Faculty> optionalFaculty = facultyRepository.findById(FacultyId);
 
@@ -52,7 +46,7 @@ public class FacultyServiceImpl implements FacultyService {
     @Override
     public Faculty updateFaculty(Faculty faculty)
     {
-        Faculty existingFaculty = facultyRepository.findById(faculty.getId()).get();
+        Faculty existingFaculty = facultyRepository.findById(faculty.getFacultyid().longValue()).get();
 
         existingFaculty.setFacultyname(faculty.getFacultyname());
         existingFaculty.setModifiedDt(faculty.getModifiedDt());
@@ -64,7 +58,7 @@ public class FacultyServiceImpl implements FacultyService {
     }
 
     @Override
-    public void deleteFaculty(int facultyId)
+    public void deleteFaculty(Long facultyId)
     {
         facultyRepository.deleteById(facultyId);
     }
