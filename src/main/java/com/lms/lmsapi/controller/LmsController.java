@@ -24,6 +24,7 @@ public class LmsController
     private FacultyService facultyService;
     private UserService userService;
     private EmailService emailService;
+    private StudentService studentService;
 
     @Autowired
     public void setUserTypeService(UserTypeService UserTypeService) {this.userTypeService = UserTypeService; }
@@ -37,6 +38,8 @@ public class LmsController
     public void setUserService(UserService UserService){ this.userService = UserService; }
     @Autowired
     public void setEmailService(EmailService EmailService){ this.emailService = EmailService; }
+    @Autowired
+    public void setStudentService(StudentService StudentService){ this.studentService = StudentService; }
 
     
     /**
@@ -344,5 +347,26 @@ public class LmsController
         }
 
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
+
+
+    /** Creates student 
+     * @param student
+     * @return returns a created student that must already be a user
+     */
+    @PostMapping(value = "/v1/createstudent")
+    public ResponseEntity<Student> createStudent(@RequestBody Student student)
+    {
+        System.out.println(student);
+
+        if(student != null)
+        {
+            Student savedStudent = studentService.createStudent(student);
+
+            return new ResponseEntity<>(savedStudent, HttpStatus.CREATED);
+        }
+
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        
     }
 }

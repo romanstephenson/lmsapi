@@ -14,13 +14,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-"userid",
-"emailAddress",
-"isPrimary",
-"createdDt",
-"modifiedDt"
-})
+@JsonPropertyOrder({"userid","emailAddress","isPrimary","createdDt","modifiedDt"})
 @Entity
 @Data
 @NoArgsConstructor

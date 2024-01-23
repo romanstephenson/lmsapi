@@ -18,8 +18,10 @@ import lombok.NoArgsConstructor;
 
 public class Staff {
     
-    //@OneToOne(mappedBy = "User")
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
     @OneToOne
 	@JoinColumn (name="userid",insertable = false, updatable = false)
     private User staffId;

@@ -12,7 +12,7 @@
 	<artifactId>lmsapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>lmsapi</name>
-	<description>Demo project for Spring Boot</description>
+	<description>API for a libary management system application that manages books for students and staff</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
