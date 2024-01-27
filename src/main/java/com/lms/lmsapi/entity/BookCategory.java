@@ -1,6 +1,9 @@
 package com.lms.lmsapi.entity;
 
+import java.io.Serializable;
 import java.sql.Date;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.*;
 
@@ -15,11 +18,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "Book_Category")
-public class BookCategory {
+public class BookCategory implements Serializable
+{
     
     @Id
+    @JsonProperty("bookcatid")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long bookcatid;
 
     @Column(nullable = false)
     private String category;

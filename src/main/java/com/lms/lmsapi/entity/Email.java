@@ -36,9 +36,9 @@ public class Email implements Serializable{
     @Column(nullable = false)
     private Long isPrimary;
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private Date createdDt;
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private Date modifiedDt;
 }

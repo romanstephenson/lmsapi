@@ -54,7 +54,7 @@ public class BookCategoryServiceImpl implements BookCategoryService
     @Override
     public BookCategory updateBookCategory(BookCategory bookCategory)
     {
-        BookCategory existinBookCategory = bookCategoryRepository.findById(bookCategory.getId()).get();
+        BookCategory existinBookCategory = bookCategoryRepository.findById(bookCategory.getBookcatid()).get();
 
         existinBookCategory.setCategory(bookCategory.getCategory());
         existinBookCategory.setModifiedDt(bookCategory.getModifiedDt());
