@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.lms.lmsapi.entity.BookCategory;
 
 @Repository
-public interface BookCategoryRepository extends JpaRepository<BookCategory, Integer>{
+public interface BookCategoryRepository extends JpaRepository<BookCategory, Long>{
 
 }

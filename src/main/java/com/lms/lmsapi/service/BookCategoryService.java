@@ -4,11 +4,11 @@ import java.util.List;
 
 import com.lms.lmsapi.entity.BookCategory;
 
-public interface BookCategoryService {
-    
+public interface BookCategoryService 
+{
     List<BookCategory> getBookCategories();
-    BookCategory getBookCategory(int Id);
+    BookCategory getBookCategory(Long Id);
     BookCategory createBookCategory(BookCategory bookCategory);
     BookCategory updateBookCategory(BookCategory bookCategory);
-    void deleteBookCategory(int bookCategory);
+    void deleteBookCategory(Long bookCategory);
 }

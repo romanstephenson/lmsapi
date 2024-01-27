@@ -5,22 +5,19 @@ import java.sql.Date;
 import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "Book")
 public class Book 
 {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int bookId;
+    private Long bookid;
 
     private String title;
 
@@ -32,17 +29,17 @@ public class Book
 
     private String isbn;
 
-    private Date yearPublished;
+    private Date yearpublished;
 
-    private int availableCopies;
-
-    @OneToOne
-    @JoinColumn(name = "Id",insertable = false, updatable = false)
-    private BookCategory bookCategory;
+    private Long availablecopies;
 
     @OneToOne
-    @JoinColumn(name = "Id",insertable = false, updatable = false)
-    private User addedBy;
+    @JoinColumn(name = "bookcatid",insertable = false, updatable = false)
+    private BookCategory bookcatid;
+
+    @OneToOne
+    @JoinColumn(name = "userid",insertable = false, updatable = false)
+    private User userid;
 
     private Date createdDt;
 

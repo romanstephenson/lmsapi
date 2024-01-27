@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- status:error mean ONLY show log4j kernel's error log in console-->
-<Configuration status="error" monitorInterval="30">
+<Configuration status="error" monitorInterval="5">
     <Properties>
-        <Property name="LOG_PATTERN">%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} %p %m%n</Property>
+        <Property name="LOG_PATTERN">%d{yyyy-MM-dd' 'HH:mm:ss.SSSZ} %p %m%n</Property>
         <Property name="APP_LOG_ROOT">src/main/resources/logs/</Property>
     </Properties>
 
