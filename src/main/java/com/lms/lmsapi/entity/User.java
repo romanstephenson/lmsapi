@@ -66,7 +66,16 @@ public class User implements Serializable {
      */
     @JsonManagedReference
     @OneToMany(mappedBy = "userid", fetch = FetchType.EAGER)
-    List<UserTypeMapping> usertypes = new ArrayList<UserTypeMapping>();
+    List<UserTypeMapping> usertype = new ArrayList<UserTypeMapping>();
+
+    /* 
+        @JsonManagedReference
+        needed for bidirectional relationship. otherwise a coult not write json infinite recursion overflow will take please.
+     * it happens because email has reference to user and user has reference to email which then causes an infinite json recursion
+     */ 
+    @JsonManagedReference
+    @OneToMany(mappedBy = "userid", fetch = FetchType.EAGER)
+    List<IdentityPass> pass = new ArrayList<IdentityPass>();
 
     @Column(nullable = true)
     private Date createdDt; 
