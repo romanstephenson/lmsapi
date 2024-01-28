@@ -2,7 +2,10 @@ package com.lms.lmsapi.entity;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.*;
@@ -46,6 +49,24 @@ public class User implements Serializable {
 
     @Column(nullable = false)
     private int isActive;
+
+    /* 
+        @JsonManagedReference
+        needed for bidirectional relationship. otherwise a coult not write json infinite recursion overflow will take please.
+     * it happens because email has reference to user and user has reference to email which then causes an infinite json recursion
+     */
+    @JsonManagedReference
+    @OneToMany(mappedBy = "userid", fetch = FetchType.EAGER)
+    List<Email> emails = new ArrayList<Email>();
+
+    /* 
+        @JsonManagedReference
+        needed for bidirectional relationship. otherwise a coult not write json infinite recursion overflow will take please.
+     * it happens because email has reference to user and user has reference to email which then causes an infinite json recursion
+     */
+    @JsonManagedReference
+    @OneToMany(mappedBy = "userid", fetch = FetchType.EAGER)
+    List<UserTypeMapping> usertypes = new ArrayList<UserTypeMapping>();
 
     @Column(nullable = true)
     private Date createdDt; 

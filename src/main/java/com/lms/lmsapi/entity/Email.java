@@ -3,6 +3,7 @@ package com.lms.lmsapi.entity;
 import java.io.Serializable;
 import java.sql.Date;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -27,6 +28,10 @@ public class Email implements Serializable{
 
     @ManyToOne
     @JsonProperty("userid")
+    /* needed for bidirectional relationship. otherwise a coult not write json infinite recursion overflow will take please.
+     * it happens because email has reference to user and user has reference to email which then causes an infinite json recursion
+     */
+    @JsonBackReference  
 	@JoinColumn (name="userid", updatable = false)
     private User userid;
 
