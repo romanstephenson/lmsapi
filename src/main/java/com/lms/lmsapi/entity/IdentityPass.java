@@ -30,7 +30,8 @@ public class IdentityPass implements Serializable
 
     private String password;
 
-    private int isactive;
+    @JsonProperty("isactive")
+    private Long isactive;
 
     @ManyToOne 
     @JsonProperty("userid")
