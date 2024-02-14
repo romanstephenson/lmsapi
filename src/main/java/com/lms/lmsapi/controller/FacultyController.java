@@ -1,6 +1,7 @@
 package com.lms.lmsapi.controller;
 
 import com.lms.lmsapi.entity.*;
+import com.lms.lmsapi.exception.FacultyNotFoundException;
 import com.lms.lmsapi.service.*;
 
 import lombok.AllArgsConstructor;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 
 @Slf4j
@@ -36,9 +38,11 @@ public class FacultyController
 
         if(faculties.isEmpty())
         {
+            log.info("Found faculties with info: " + faculties);
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
+        log.warn("No faculties found.");
         return new ResponseEntity<>(faculties, HttpStatus.OK);
     }
 
@@ -50,15 +54,14 @@ public class FacultyController
     @GetMapping(value = "/v1/faculty/{id}")
     public ResponseEntity<Faculty> getFaculty(@PathVariable("id") Long Id)
     {
-        Faculty faculty = facultyService.getFaculty(Id);
-
-        if (faculty != null) 
+        try 
         {
-            return new ResponseEntity<>(faculty,HttpStatus.OK);    
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-            
-        }
+            return new ResponseEntity<Faculty>(facultyService.getFaculty(Id), HttpStatus.OK);
+        } 
+        catch (FacultyNotFoundException e) 
+        {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
+        }       
     }
 
     

@@ -1,11 +1,17 @@
 package com.lms.lmsapi.service.serviceimpl;
 
+import com.lms.lmsapi.entity.Email;
+import com.lms.lmsapi.entity.IdentityPass;
 import com.lms.lmsapi.entity.User;
+import com.lms.lmsapi.entity.UserType;
+import com.lms.lmsapi.entity.UserTypeMapping;
 import com.lms.lmsapi.exception.UserNotFoundException;
+import com.lms.lmsapi.repository.EmailRepository;
+import com.lms.lmsapi.repository.IdentityPassRepository;
 import com.lms.lmsapi.repository.UserRepository;
+import com.lms.lmsapi.repository.UserTypeMappingRepository;
 import com.lms.lmsapi.service.UserService;
 
-import lombok.AllArgsConstructor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,12 +19,16 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@AllArgsConstructor
 public class UserServiceImpl implements UserService
 { 
     @Autowired
     private UserRepository userRepository;
-    //private EmailRepository emailRepository;
+    @Autowired
+    private EmailRepository emailRepository;
+    @Autowired
+    private UserTypeMappingRepository userTypeMappingRepository;
+    @Autowired
+    private IdentityPassRepository identityPassRepository;
 
     @Override
     public List<User> getUsers()
@@ -52,6 +62,69 @@ public class UserServiceImpl implements UserService
         }
         
     }
+
+    @Override
+    public User createFullUser(User user)
+    {
+        // System.out.println(user.toString());
+        User newUser = new User();
+        UserTypeMapping newUserTypeMapping = new UserTypeMapping();
+        Email newEmail = new Email(); 
+        UserType existingUserType = new UserType();
+        IdentityPass identityPass = new IdentityPass();
+
+        //create user only object
+        newUser.setFirstname(user.getFirstname());
+        newUser.setLastname(user.getLastname());
+        newUser.setMiddlename(user.getMiddlename());
+        newUser.setUsername(user.getUsername());
+        newUser.setDob(user.getDob());
+        newUser.setGender(user.getGender());
+        newUser.setChangePass(user.getChangePass());
+        newUser.setIsActive(user.getIsActive());
+        newUser.setCreatedDt(user.getCreatedDt());
+        newUser.setModifiedDt(user.getModifiedDt());
+
+        //save user only object
+        User savedUser = userRepository.save(newUser);
+
+        //setup email object
+        newEmail = user.getEmail().get(0);
+        newEmail.setUserid(savedUser);
+
+        //save email object
+        emailRepository.save(newEmail);
+
+        //retrieve existing user type with id passed in
+        existingUserType = user.getUsertypemapping().get(0).getUsertypeid();
+        System.out.println(existingUserType);
+        existingUserType.getUsertypeid();
+
+        //setup user type mapping object
+        newUserTypeMapping.setUsertypeid(existingUserType);
+        newUserTypeMapping.setUserid(savedUser);
+        newUserTypeMapping.setCreatedDt(user.getUsertypemapping().get(0).getCreatedDt());
+        newUserTypeMapping.setModifiedDt(user.getUsertypemapping().get(0).getModifiedDt());
+
+        //save user type mapping object
+        userTypeMappingRepository.save(newUserTypeMapping);
+
+        //setup identity pass object
+        identityPass.setUserid(savedUser);
+        identityPass.setPassword(user.getPass().get(0).getPassword());
+        identityPass.setIsactive(user.getPass().get(0).getIsactive());
+        identityPass.setValidtill(user.getPass().get(0).getValidtill());
+        identityPass.setCreatedDt(user.getPass().get(0).getCreatedDt());
+        identityPass.setModifiedDt(user.getPass().get(0).getModifiedDt());
+
+        //save identity pass object
+        identityPassRepository.save(identityPass);
+
+        Long userId = savedUser.getUserid().longValue();
+
+        return userRepository.findById(userId).get();
+    }
+    
 
     @Override
     public User updateUser(User user)

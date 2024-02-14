@@ -40,7 +40,7 @@ public class FacultyServiceImpl implements FacultyService {
         {
             return optionalFaculty.get();    
         } else {
-            throw new FacultyNotFoundException("Facult was not found.");
+            throw new FacultyNotFoundException("Faculty with ID: " + FacultyId + " was not found.");
         }
     }
 

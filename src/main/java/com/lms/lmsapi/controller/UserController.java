@@ -80,4 +80,21 @@ public class UserController
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
+    /** Creates a user
+     * @param user
+     * @return returns created User object
+     */
+    @PostMapping(value = "/v1/createfulluser")
+    public ResponseEntity<User> createFullUser(@RequestBody User user)
+    {
+        if(user != null)
+        {
+            User savedUser = userService.createFullUser(user);
+
+            return new ResponseEntity<>(savedUser, HttpStatus.CREATED);
+        }
+
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
+
 }

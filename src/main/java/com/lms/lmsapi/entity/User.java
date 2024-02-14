@@ -5,18 +5,23 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({"firstname","middlename","lastname","username","dob","gender","changePass","isActive","email","usertypemapping","pass","createdDt","modifiedDt"})
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "Users")
@@ -57,7 +62,8 @@ public class User implements Serializable {
      */
     @JsonManagedReference
     @OneToMany(mappedBy = "userid", fetch = FetchType.EAGER)
-    List<Email> emails = new ArrayList<Email>();
+    private List<Email> email = new ArrayList<Email>();
+    //private Email email;
 
     /* 
         @JsonManagedReference
@@ -66,7 +72,8 @@ public class User implements Serializable {
      */
     @JsonManagedReference
     @OneToMany(mappedBy = "userid", fetch = FetchType.EAGER)
-    List<UserTypeMapping> usertype = new ArrayList<UserTypeMapping>();
+    private List<UserTypeMapping> usertypemapping = new ArrayList<UserTypeMapping>();
+    //private UserTypeMapping usertypemapping;
 
     /* 
         @JsonManagedReference
@@ -75,12 +82,13 @@ public class User implements Serializable {
      */ 
     @JsonManagedReference
     @OneToMany(mappedBy = "userid", fetch = FetchType.EAGER)
-    List<IdentityPass> pass = new ArrayList<IdentityPass>();
+    private List<IdentityPass> pass = new ArrayList<IdentityPass>();
+    //private IdentityPass pass;
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private Date createdDt; 
 
-    @Column(nullable = true)
+    @Column(nullable = false)
     private Date modifiedDt;
 
 }

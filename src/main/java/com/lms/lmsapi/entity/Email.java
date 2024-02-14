@@ -12,18 +12,23 @@ import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({"userid","emailAddress","isPrimary","createdDt","modifiedDt"})
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "Email")
-public class Email implements Serializable{
+public class Email implements Serializable
+{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonProperty("emailid")
     private Long emailid;
 
     @ManyToOne

@@ -24,6 +24,7 @@ public class UserTypeMapping  implements Serializable
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonProperty("usertypemappingid")
     private Long usertypemappingid;
 
     @OneToOne
@@ -35,12 +36,14 @@ public class UserTypeMapping  implements Serializable
     @JoinColumn(name="userid")
     private User userid;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     @JsonProperty("usertypeid")
     @JoinColumn(name="usertypeid")
     private UserType usertypeid;
 
+    @Column(nullable = false)
     private Date createdDt;
 
+    @Column(nullable = false)
     private Date modifiedDt;
 }
