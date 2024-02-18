@@ -1,30 +1,26 @@
-logging:
-    config: src/main/resources/log4j2.xml
-    level:
-        org:
-            apache: trace
-            hibernate:
-                type:
-                    descriptor:
-                        sql: trace
-            springframework:
-                web: trace
 spring:
-    datasource:
-        url: jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;integratedSecurity=true;databaseName=lms
-    jackson:
-        time-zone: EST
-    jpa:
-        open-in-view: false
-        properties:
-            hibernate:
-                '[default_schema]': dbo
-                '[format_sql]': true
-                '[show_sql]': true
-        show-sql: true
-    profiles:
-        active: development
-
-server:
-    error:
-        include-message: always
+  jpa:
+    open-in-view: 'false'
+    properties:
+      hibernate:
+        '[default_schema]': dbo
+        '[format_sql]': true
+        '[show_sql]': true
+    show-sql: 'true'
+  jackson:
+    time-zone: EST
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;integratedSecurity=true;databaseName=lms
+  profiles:
+    active: development
+logging:
+  level:
+    org:
+      springframework:
+        web: trace
+      apache: trace
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
+  config: src/main/resources/log4j2.properties
