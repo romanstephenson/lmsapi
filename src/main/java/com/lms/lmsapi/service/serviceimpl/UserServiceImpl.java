@@ -112,7 +112,7 @@ public class UserServiceImpl implements UserService
         //setup identity pass object
         identityPass.setUserid(savedUser);
         identityPass.setPassword(user.getPass().get(0).getPassword());
-        identityPass.setIsactive(user.getPass().get(0).getIsactive());
+        identityPass.setIsActive(user.getPass().get(0).getIsActive());
         identityPass.setValidtill(user.getPass().get(0).getValidtill());
         identityPass.setCreatedDt(user.getPass().get(0).getCreatedDt());
         identityPass.setModifiedDt(user.getPass().get(0).getModifiedDt());

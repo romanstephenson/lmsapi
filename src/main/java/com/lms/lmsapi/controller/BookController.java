@@ -3,8 +3,7 @@ package com.lms.lmsapi.controller;
 import com.lms.lmsapi.entity.*;
 import com.lms.lmsapi.service.*;
 
-import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+//import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
@@ -14,9 +13,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
-@Slf4j
+//@Slf4j
 @RestController
-@AllArgsConstructor
 @RequestMapping(value = "/lmsapi")
 public class BookController 
 {
@@ -39,7 +37,7 @@ public class BookController
     }
 
     @GetMapping(value = "/v1/book/{id}")
-    public ResponseEntity<Book> getBook(@PathVariable("id") Long id)
+    public ResponseEntity<Book> getBook(@PathVariable Long id)
     {
         if(id > 0 )
         {
@@ -66,9 +64,9 @@ public class BookController
     }
 
     @PutMapping(value = "/v1/updatebook/{id}")
-    public ResponseEntity<Book> updateBook(@RequestBody Book book, @PathVariable("id") Long id)
+    public ResponseEntity<Book> updateBook(@RequestBody Book book, @PathVariable Long id)
     {
-        if(book != null || id > 0)
+        if(book != null && id > 0)
         {
             book.setBookid(id);
 

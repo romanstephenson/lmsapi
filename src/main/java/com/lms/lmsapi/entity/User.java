@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({"firstname","middlename","lastname","username","dob","gender","changePass","isActive","email","usertypemapping","pass","createdDt","modifiedDt"})
+@JsonPropertyOrder({"userid","firstname","middlename","lastname","username","dob","gender","changePass","isActive","email","usertypemapping","pass","createdDt","modifiedDt"})
 @Entity
 @Getter
 @Setter

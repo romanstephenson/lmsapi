@@ -11,6 +11,6 @@ public interface IdentityPassService
     IdentityPass getIdentityPassByUserId(Long identpassid);
     IdentityPass createIdentityPass(IdentityPass identpass);
     IdentityPass updatIdentityPass(IdentityPass identpass);
-    IdentityPass findByUserIdAndIsActive(User userid, Long isactive);
+    //IdentityPass findByUseridAndIsactive(User userid /*, Long isactive */);
     void deleteIdentityPass(Long identpassid);
 }

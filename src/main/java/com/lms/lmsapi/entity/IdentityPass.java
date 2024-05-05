@@ -11,13 +11,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({"password","isactive","userid","validtill","createdDt","modifiedDt"})
-@Data
+@JsonPropertyOrder({"password","isActive","userid","validtill","createdDt","modifiedDt"})
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -28,10 +30,11 @@ public class IdentityPass implements Serializable
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long identpassid;
 
+    @Column(nullable = false)
     private String password;
 
-    @JsonProperty("isactive")
-    private Long isactive;
+    @Column(nullable = false)
+    private int isActive;
 
     @ManyToOne 
     @JsonProperty("userid")
@@ -42,10 +45,13 @@ public class IdentityPass implements Serializable
     @JoinColumn(name = "userid",insertable = true, updatable = false)
     private User userid;
 
+    @Column(nullable = false)
     private Long validtill;
 
+    @Column(nullable = false)
     private Date createdDt;
 
+    @Column(nullable = false)
     private Date modifiedDt;
     
 }

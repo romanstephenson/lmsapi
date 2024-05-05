@@ -39,7 +39,7 @@ public class IdentityPassServiceImpl implements IdentityPassService
     @Override
     public IdentityPass getIdentityPassByUserId(Long id)
     {
-        if(id == null)
+        if(id == null) 
         {
             throw new IdentityPassNotFoundException("User id can not be null.");
         }
@@ -55,24 +55,24 @@ public class IdentityPassServiceImpl implements IdentityPassService
         }
     }
 
-    @Override
-    public IdentityPass findByUserIdAndIsActive(User userid, Long isactive)
-    {
-        if(userid == null || isactive == null)
-        {
-            throw new IdentityPassNotFoundException("User id or isactive can not be null.");
-        }
+    // @Override
+    // public IdentityPass findByUserIdAndIsActive(User userid /* , Long isactive*/)
+    // {
+    //     if(userid == null /*|| isactive == null*/)
+    //     {
+    //         throw new IdentityPassNotFoundException("User id or isactive can not be null.");
+    //     }
 
-        IdentityPass Pass = identityPassRepository.findByUseridAndIsactive(userid,isactive);
+    //     IdentityPass Pass = identityPassRepository.findByUseridAndIsactive(userid.getUserid(), userid.getIsActive() /* ,isactive*/);
 
-        if (Pass != null) 
-        {
-            return Pass;    
-        } else 
-        {
-            throw new IdentityPassNotFoundException("Identity Pass not found");    
-        }
-    }
+    //     if (Pass != null) 
+    //     {
+    //         return Pass;    
+    //     } else 
+    //     {
+    //         throw new IdentityPassNotFoundException("Identity Pass not found");    
+    //     }
+    // }
 
     @Override
     public IdentityPass updatIdentityPass(IdentityPass identityPass)
@@ -82,7 +82,7 @@ public class IdentityPassServiceImpl implements IdentityPassService
             IdentityPass existingIdentityPass = identityPassRepository.findById(identityPass.getIdentpassid().longValue()).get();
 
             existingIdentityPass.setPassword(identityPass.getPassword());
-            existingIdentityPass.setIsactive(identityPass.getIsactive());
+            existingIdentityPass.setIsActive(identityPass.getIsActive());
             existingIdentityPass.setUserid(identityPass.getUserid());
             existingIdentityPass.setValidtill(identityPass.getValidtill());
             existingIdentityPass.setCreatedDt(identityPass.getCreatedDt());

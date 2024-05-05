@@ -29,24 +29,24 @@ public class Student implements Serializable
 
     @OneToOne
     @JsonProperty("userid")
-	@JoinColumn (name="userid",insertable = true, updatable = false)
+	@JoinColumn (name="userid",insertable = false, updatable = false)
     private User userid;
 
     @OneToOne
     @JsonProperty("catid")
-    @JoinColumn(name = "catid",insertable = true, updatable = false)
+    @JoinColumn(name = "catid",insertable = false, updatable = false)
     private StudentCategory catid;
 
     @OneToOne
     @JsonProperty("facultyid")
-    @JoinColumn(name = "facultyid",insertable = true, updatable = false)
+    @JoinColumn(name = "facultyid",insertable = false, updatable = false)
     private Faculty facultyid;
 
     @Column(nullable = false)
     private Long year;
 
     @Column(nullable = false)
-    private Date createdDt;
+    private Date createdDt; 
 
     @Column(nullable = false)
     private Date modifiedDt;
