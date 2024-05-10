@@ -36,7 +36,7 @@ public class IdentityPass implements Serializable
     @Column(nullable = false)
     private int isActive;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne //(cascade = CascadeType.MERGE)
     @JsonProperty("userid")
     /* needed for bidirectional relationship. otherwise a coult not write json infinite recursion overflow will take please.
      * it happens because email has reference to user and user has reference to email which then causes an infinite json recursion

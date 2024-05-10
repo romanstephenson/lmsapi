@@ -12,4 +12,5 @@ public interface IdentityPassRepository extends JpaRepository<IdentityPass, Long
 {
     //case matters for the entity attributes being mentioned in name of function
     IdentityPass findByUseridAndIsActive(User user , int isActive);
+    
 }

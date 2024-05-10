@@ -1,71 +1,197 @@
-2024-05-09 22:02:09.301 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310129301; nextExpiration=1715310129301; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:10.308 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310130308; nextExpiration=1715310130301; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:11.308 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310131308; nextExpiration=1715310131308; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:12.308 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310132308; nextExpiration=1715310132308; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:13.309 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310133309; nextExpiration=1715310133308; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:14.310 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310134310; nextExpiration=1715310134309; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:15.311 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310135311; nextExpiration=1715310135310; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:16.312 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310136312; nextExpiration=1715310136311; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:17.313 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310137313; nextExpiration=1715310137312; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:18.313 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310138313; nextExpiration=1715310138313; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:19.314 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310139314; nextExpiration=1715310139313; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:20.315 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310140315; nextExpiration=1715310140314; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:21.316 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310141316; nextExpiration=1715310141315; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:22.316 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310142316; nextExpiration=1715310142316; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:23.317 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310143317; nextExpiration=1715310143316; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:24.317 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310144317; nextExpiration=1715310144317; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:25.318 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310145318; nextExpiration=1715310145317; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:26.319 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310146319; nextExpiration=1715310146318; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:27.319 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310147319; nextExpiration=1715310147319; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:28.320 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310148320; nextExpiration=1715310148319; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:29.321 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310149321; nextExpiration=1715310149320; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:30.321 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310150321; nextExpiration=1715310150321; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:31.322 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310151322; nextExpiration=1715310151321; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:32.324 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310152324; nextExpiration=1715310152322; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:33.324 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310153324; nextExpiration=1715310153324; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:34.325 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310154325; nextExpiration=1715310154324; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:35.325 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310155325; nextExpiration=1715310155325; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:36.325 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310156325; nextExpiration=1715310156325; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:37.326 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310157326; nextExpiration=1715310157325; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:38.327 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310158327; nextExpiration=1715310158326; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:39.327 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310159327; nextExpiration=1715310159327; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:40.328 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310160328; nextExpiration=1715310160327; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:41.328 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310161328; nextExpiration=1715310161328; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:42.329 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310162329; nextExpiration=1715310162328; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:43.329 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310163329; nextExpiration=1715310163329; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:44.329 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310164329; nextExpiration=1715310164329; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:45.330 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310165330; nextExpiration=1715310165329; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:46.330 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310166330; nextExpiration=1715310166330; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:47.331 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310167331; nextExpiration=1715310167330; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:48.331 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310168331; nextExpiration=1715310168331; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:49.332 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310169332; nextExpiration=1715310169331; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:50.333 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310170333; nextExpiration=1715310170332; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:51.334 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310171334; nextExpiration=1715310171333; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:52.334 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310172334; nextExpiration=1715310172334; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:53.138 TRACE [Catalina-utility-2] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Start expire sessions StandardManager at 1715310173136 sessioncount 0
-2024-05-09 22:02:53.138 TRACE [Catalina-utility-2] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - End expire sessions StandardManager processingTime 2 expired sessions: 0
-2024-05-09 22:02:53.335 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310173335; nextExpiration=1715310173334; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:54.336 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310174336; nextExpiration=1715310174335; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:55.336 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310175336; nextExpiration=1715310175336; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:56.337 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310176337; nextExpiration=1715310176336; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:57.337 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310177337; nextExpiration=1715310177337; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:58.338 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310178338; nextExpiration=1715310178337; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:02:59.338 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310179338; nextExpiration=1715310179338; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:03:00.338 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310180338; nextExpiration=1715310180338; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:03:01.339 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310181339; nextExpiration=1715310181338; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:03:02.340 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310182340; nextExpiration=1715310182339; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:03:03.341 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310183341; nextExpiration=1715310183340; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:03:04.342 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310184342; nextExpiration=1715310184341; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:03:05.342 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=1; now=1715310185342; nextExpiration=1715310185342; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:03:05.342 TRACE [http-nio-8080-exec-3] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Processing socket [org.apache.tomcat.util.net.NioChannel@7378815d:java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:8080 remote=/[0:0:0:0:0:0:0:1]:62867]] with status [ERROR]
-2024-05-09 22:03:05.342 TRACE [http-nio-8080-exec-3] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Found processor [null] for socket [org.apache.tomcat.util.net.NioChannel@7378815d:java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:8080 remote=/[0:0:0:0:0:0:0:1]:62867]]
-2024-05-09 22:03:05.343 TRACE [http-nio-8080-exec-3] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Counting down[http-nio-8080-exec-3] latch=1
-2024-05-09 22:03:05.343 TRACE [http-nio-8080-exec-3] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Calling [org.apache.tomcat.util.net.NioEndpoint@1a448c65].closeSocket([org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@1217e282:org.apache.tomcat.util.net.NioChannel@7378815d:java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:8080 remote=/[0:0:0:0:0:0:0:1]:62867]])
-2024-05-09 22:03:06.343 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715310186343; nextExpiration=1715310186342; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:03:07.343 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715310187343; nextExpiration=1715310187343; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:03:08.344 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715310188344; nextExpiration=1715310188343; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:03:09.345 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715310189345; nextExpiration=1715310189344; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:03:10.345 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715310190345; nextExpiration=1715310190345; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:03:11.346 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715310191346; nextExpiration=1715310191345; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:03:12.346 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715310192346; nextExpiration=1715310192346; keyCount=0; hasEvents=false; eval=false
-2024-05-09 22:03:13.347 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715310193347; nextExpiration=1715310193346; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:24:56.568 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [INITIALIZED]
+2024-05-09 23:24:56.659 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [STARTING_PREP]
+2024-05-09 23:24:56.659 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardWrapperValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [INITIALIZING]
+2024-05-09 23:24:56.660 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardWrapperValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [INITIALIZED]
+2024-05-09 23:24:56.661 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardWrapperValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [STARTING_PREP]
+2024-05-09 23:24:56.665 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardWrapperValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [STARTING]
+2024-05-09 23:24:56.668 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardWrapperValve[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [STARTED]
+2024-05-09 23:24:56.670 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [STARTING]
+2024-05-09 23:24:56.682 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]]] to [STARTED]
+2024-05-09 23:24:56.684 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]] to [STARTING]
+2024-05-09 23:24:56.686 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[].StandardWrapper[dispatcherServlet]] to [STARTED]
+2024-05-09 23:24:56.778 TRACE [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Configuring application event listeners
+2024-05-09 23:24:56.779 TRACE [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Sending application start events
+2024-05-09 23:24:56.791 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardManager[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [INITIALIZING]
+2024-05-09 23:24:56.792 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardManager[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [INITIALIZED]
+2024-05-09 23:24:56.794 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardManager[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTING_PREP]
+2024-05-09 23:24:56.795 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [org.springframework.boot.web.embedded.tomcat.LazySessionIdGenerator@349312d5] to [INITIALIZING]
+2024-05-09 23:24:56.796 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [org.springframework.boot.web.embedded.tomcat.LazySessionIdGenerator@349312d5] to [INITIALIZED]
+2024-05-09 23:24:56.798 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [org.springframework.boot.web.embedded.tomcat.LazySessionIdGenerator@349312d5] to [STARTING_PREP]
+2024-05-09 23:24:56.800 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [org.springframework.boot.web.embedded.tomcat.LazySessionIdGenerator@349312d5] to [STARTING]
+2024-05-09 23:24:56.803 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [org.springframework.boot.web.embedded.tomcat.LazySessionIdGenerator@349312d5] to [STARTED]
+2024-05-09 23:24:56.814 TRACE [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Start: Loading persisted sessions
+2024-05-09 23:24:56.816 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardManager[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTING]
+2024-05-09 23:24:56.816 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardManager[StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]] to [STARTED]
+2024-05-09 23:24:56.817 TRACE [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting filters
+2024-05-09 23:24:56.818 TRACE [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] -  Starting filter 'requestContextFilter'
+2024-05-09 23:24:56.857 TRACE [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] -  Starting filter 'webMvcObservationFilter'
+2024-05-09 23:24:56.863 DEBUG [main] [org.springframework.web.filter.GenericFilterBean.init(GenericFilterBean.java:240)] - Filter 'webMvcObservationFilter' configured for use
+2024-05-09 23:24:56.865 TRACE [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] -  Starting filter 'Tomcat WebSocket (JSR356) Filter'
+2024-05-09 23:24:56.866 TRACE [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] -  Starting filter 'characterEncodingFilter'
+2024-05-09 23:24:56.867 TRACE [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] -  Starting filter 'formContentFilter'
+2024-05-09 23:24:56.870 TRACE [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting completed
+2024-05-09 23:24:56.880 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]] to [STARTING]
+2024-05-09 23:24:56.891 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]] to [STARTED]
+2024-05-09 23:24:56.898 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZING]
+2024-05-09 23:24:56.900 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZED]
+2024-05-09 23:24:56.900 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING_PREP]
+2024-05-09 23:24:56.901 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [ErrorReportValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZING]
+2024-05-09 23:24:56.902 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315096902; nextExpiration=1715315096900; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:24:56.903 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [ErrorReportValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZED]
+2024-05-09 23:24:56.904 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [ErrorReportValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING_PREP]
+2024-05-09 23:24:56.906 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [ErrorReportValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING]
+2024-05-09 23:24:56.907 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [ErrorReportValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTED]
+2024-05-09 23:24:56.908 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardHostValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZING]
+2024-05-09 23:24:56.909 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardHostValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [INITIALIZED]
+2024-05-09 23:24:56.910 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardHostValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING_PREP]
+2024-05-09 23:24:56.911 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardHostValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING]
+2024-05-09 23:24:56.913 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardHostValve[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTED]
+2024-05-09 23:24:56.915 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTING]
+2024-05-09 23:24:56.916 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardPipeline[StandardEngine[Tomcat].StandardHost[localhost]]] to [STARTED]
+2024-05-09 23:24:56.917 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardEngine[Tomcat].StandardHost[localhost]] to [STARTING]
+2024-05-09 23:24:56.918 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardEngine[Tomcat].StandardHost[localhost]] to [STARTED]
+2024-05-09 23:24:56.919 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardPipeline[StandardEngine[Tomcat]]] to [INITIALIZING]
+2024-05-09 23:24:56.924 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardPipeline[StandardEngine[Tomcat]]] to [INITIALIZED]
+2024-05-09 23:24:56.928 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardPipeline[StandardEngine[Tomcat]]] to [STARTING_PREP]
+2024-05-09 23:24:56.930 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardEngineValve[StandardEngine[Tomcat]]] to [INITIALIZING]
+2024-05-09 23:24:56.931 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardEngineValve[StandardEngine[Tomcat]]] to [INITIALIZED]
+2024-05-09 23:24:56.931 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardEngineValve[StandardEngine[Tomcat]]] to [STARTING_PREP]
+2024-05-09 23:24:56.932 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardEngineValve[StandardEngine[Tomcat]]] to [STARTING]
+2024-05-09 23:24:56.932 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardEngineValve[StandardEngine[Tomcat]]] to [STARTED]
+2024-05-09 23:24:56.933 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardPipeline[StandardEngine[Tomcat]]] to [STARTING]
+2024-05-09 23:24:56.933 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardPipeline[StandardEngine[Tomcat]]] to [STARTED]
+2024-05-09 23:24:56.934 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardEngine[Tomcat]] to [STARTING]
+2024-05-09 23:24:56.946 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardEngine[Tomcat]] to [STARTED]
+2024-05-09 23:24:56.948 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [org.apache.catalina.mapper.MapperListener@1d4cc7] to [STARTING_PREP]
+2024-05-09 23:24:56.949 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [org.apache.catalina.mapper.MapperListener@1d4cc7] to [STARTING]
+2024-05-09 23:24:56.952 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Registered host [localhost]
+2024-05-09 23:24:56.961 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Register Wrapper [dispatcherServlet] in Context [] for service [StandardService[Tomcat]]
+2024-05-09 23:24:56.962 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Register Context [] for service [StandardService[Tomcat]]
+2024-05-09 23:24:56.963 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Register host [localhost] at domain [null] for service [StandardService[Tomcat]]
+2024-05-09 23:24:56.963 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [org.apache.catalina.mapper.MapperListener@1d4cc7] to [STARTED]
+2024-05-09 23:24:56.965 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardService[Tomcat]] to [STARTED]
+2024-05-09 23:24:56.970 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [StandardServer[-1]] to [STARTED]
+2024-05-09 23:24:57.732 TRACE [Catalina-utility-2] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Start expire sessions StandardManager at 1715315097731 sessioncount 0
+2024-05-09 23:24:57.732 TRACE [Catalina-utility-2] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - End expire sessions StandardManager processingTime 1 expired sessions: 0
+2024-05-09 23:24:57.905 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315097904; nextExpiration=1715315097902; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:24:58.905 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315098905; nextExpiration=1715315098904; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:24:59.909 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315099909; nextExpiration=1715315099905; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:00.918 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315100918; nextExpiration=1715315100909; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:01.922 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315101922; nextExpiration=1715315101918; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:02.927 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315102926; nextExpiration=1715315102922; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:03.927 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315103927; nextExpiration=1715315103926; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:04.928 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315104928; nextExpiration=1715315104927; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:05.928 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315105928; nextExpiration=1715315105928; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:06.929 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315106929; nextExpiration=1715315106928; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:07.932 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315107932; nextExpiration=1715315107929; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:08.935 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315108935; nextExpiration=1715315108932; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:09.944 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315109944; nextExpiration=1715315109935; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:10.538 TRACE [main] [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:291)] - 
+	c.l.l.c.BookCategoryController:
+	{GET [/lmsapi/v1/bookcategory/{id}]}: getBookCategory(Long)
+	{GET [/lmsapi/v1/bookcategories]}: getBookCategories()
+	{POST [/lmsapi/v1/createbookcategory]}: createBookCategory(BookCategory)
+2024-05-09 23:25:10.565 TRACE [main] [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:291)] - 
+	c.l.l.c.BookController:
+	{PUT [/lmsapi/v1/updatebook/{id}]}: updateBook(Book,Long)
+	{POST [/lmsapi/v1/createbook]}: createBook(Book)
+	{GET [/lmsapi/v1/book/{id}]}: getBook(Long)
+	{GET [/lmsapi/v1/books]}: getAllBooks()
+2024-05-09 23:25:10.574 TRACE [main] [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:291)] - 
+	c.l.l.c.BookIssueController:
+	{POST [/lmsapi/v1/issuebook]}: issueBook(BookIssueLog)
+2024-05-09 23:25:10.578 TRACE [main] [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:291)] - 
+	c.l.l.c.EmailController:
+	{PUT [/lmsapi/v1/updateuseremail/{id}]}: updateEmail(Email,Long)
+	{POST [/lmsapi/v1/createuseremail]}: createEmail(Email)
+2024-05-09 23:25:10.583 TRACE [main] [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:291)] - 
+	c.l.l.c.FacultyController:
+	{POST [/lmsapi/v1/createfaculty]}: createFaculty(Faculty)
+	{GET [/lmsapi/v1/faculty/{id}]}: getFaculty(Long)
+	{GET [/lmsapi/v1/faculties]}: getFaculties()
+2024-05-09 23:25:10.597 TRACE [main] [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:291)] - 
+	c.l.l.c.IdentityPassController:
+	{GET [/lmsapi/v1/activeidentitypass/{userid}]}: getActiveIdentityPass(Long)
+	{POST [/lmsapi/v1/createidentitypass]}: createidentitypass(IdentityPass)
+	{PUT [/lmsapi/v1/updateidentity/{id}]}: updateIdentityPass(IdentityPass,Long)
+	{GET [/lmsapi/v1/identitypass/{userid}]}: getIdentPass(Long)
+2024-05-09 23:25:10.604 TRACE [main] [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:291)] - 
+	c.l.l.c.StudentCategoryController:
+	{GET [/lmsapi/v1/studentcategories]}: getStudentCategories()
+	{GET [/lmsapi/v1/studentcategory/{id}]}: getStudentCategory(Long)
+2024-05-09 23:25:10.610 TRACE [main] [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:291)] - 
+	c.l.l.c.StudentController:
+	{POST [/lmsapi/v1/createstudent]}: createStudent(Student)
+2024-05-09 23:25:10.622 TRACE [main] [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:291)] - 
+	c.l.l.c.UserController:
+	{GET [/lmsapi/v1/user/{id}]}: getUser(Long)
+	{POST [/lmsapi/v1/createuser]}: createUser(User)
+	{GET [/lmsapi/v1/users]}: getAllUsers()
+	{POST [/lmsapi/v1/createfulluser]}: createFullUser(User)
+2024-05-09 23:25:10.632 TRACE [main] [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:291)] - 
+	c.l.l.c.UserTypeController:
+	{POST [/lmsapi/v1/createusertype]}: createUserType(UserType)
+	{GET [/lmsapi/v1/usertypes]}: getAllUserTypes()
+	{GET [/lmsapi/v1/usertype/{id}]}: getUserType(Long)
+2024-05-09 23:25:10.644 TRACE [main] [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:291)] - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2024-05-09 23:25:10.660 DEBUG [main] [org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.handlerMethodsInitialized(AbstractHandlerMethodMapping.java:366)] - 29 mappings in 'requestMappingHandlerMapping'
+2024-05-09 23:25:10.733 DEBUG [main] [org.springframework.web.servlet.handler.AbstractDetectingUrlHandlerMapping.detectHandlers(AbstractDetectingUrlHandlerMapping.java:89)] - Detected 0 mappings in 'beanNameHandlerMapping'
+2024-05-09 23:25:10.946 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315110945; nextExpiration=1715315110944; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:11.392 TRACE [main] [org.springframework.web.servlet.function.support.RouterFunctionMapping.logRouterFunctions(RouterFunctionMapping.java:177)] - 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-05-09 23:25:11.519 TRACE [main] [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:452)] - Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-05-09 23:25:11.519 TRACE [main] [org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:452)] - Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-05-09 23:25:11.520 DEBUG [main] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.logMappings(SimpleUrlHandlerMapping.java:187)] - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-09 23:25:11.923 DEBUG [main] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:634)] - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-09 23:25:11.947 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315111947; nextExpiration=1715315111945; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:12.160 DEBUG [main] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:305)] - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-09 23:25:12.949 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315112949; nextExpiration=1715315112947; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:13.956 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315113955; nextExpiration=1715315113949; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:14.495 INFO [RMI TCP Connection(2)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-09 23:25:14.497 INFO [RMI TCP Connection(2)-127.0.0.1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:532)] - Initializing Servlet 'dispatcherServlet'
+2024-05-09 23:25:14.498 TRACE [RMI TCP Connection(2)-127.0.0.1] [org.springframework.web.servlet.DispatcherServlet.initMultipartResolver(DispatcherServlet.java:530)] - Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@45e6f47a
+2024-05-09 23:25:14.498 TRACE [RMI TCP Connection(2)-127.0.0.1] [org.springframework.web.servlet.DispatcherServlet.initLocaleResolver(DispatcherServlet.java:554)] - Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@3fc92211
+2024-05-09 23:25:14.499 TRACE [RMI TCP Connection(2)-127.0.0.1] [org.springframework.web.servlet.DispatcherServlet.initThemeResolver(DispatcherServlet.java:580)] - Detected org.springframework.web.servlet.theme.FixedThemeResolver@50572c04
+2024-05-09 23:25:14.502 TRACE [RMI TCP Connection(2)-127.0.0.1] [org.springframework.web.servlet.DispatcherServlet.initRequestToViewNameTranslator(DispatcherServlet.java:730)] - Detected DefaultRequestToViewNameTranslator
+2024-05-09 23:25:14.504 TRACE [RMI TCP Connection(2)-127.0.0.1] [org.springframework.web.servlet.DispatcherServlet.initFlashMapManager(DispatcherServlet.java:794)] - Detected SessionFlashMapManager
+2024-05-09 23:25:14.512 DEBUG [RMI TCP Connection(2)-127.0.0.1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:549)] - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-09 23:25:14.512 INFO [RMI TCP Connection(2)-127.0.0.1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:554)] - Completed initialization in 15 ms
+2024-05-09 23:25:14.514 TRACE [RMI TCP Connection(2)-127.0.0.1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] -   Returning instance
+2024-05-09 23:25:14.981 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315114981; nextExpiration=1715315114955; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:16.007 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315116006; nextExpiration=1715315115981; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:16.099 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [Connector["http-nio-8080"]] to [STARTING_PREP]
+2024-05-09 23:25:16.198 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [Connector["http-nio-8080"]] to [STARTING]
+2024-05-09 23:25:16.200 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-09 23:25:16.228 TRACE [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Destroy initiated for 0.0.0.0/0.0.0.0:8080
+2024-05-09 23:25:16.230 TRACE [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Destroy completed for 0.0.0.0/0.0.0.0:8080
+2024-05-09 23:25:16.232 DEBUG [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Setting state for [Connector["http-nio-8080"]] to [FAILED]
+2024-05-09 23:25:16.793 ERROR [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:40)] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2024-05-09 23:25:17.017 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315117017; nextExpiration=1715315117006; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:18.018 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315118018; nextExpiration=1715315118017; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:19.021 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315119021; nextExpiration=1715315119018; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:20.021 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315120021; nextExpiration=1715315120021; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:21.022 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315121022; nextExpiration=1715315121021; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:22.023 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315122023; nextExpiration=1715315122022; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:23.024 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315123024; nextExpiration=1715315123023; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:24.025 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315124025; nextExpiration=1715315124024; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:25.025 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315125025; nextExpiration=1715315125025; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:26.026 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315126026; nextExpiration=1715315126025; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:27.027 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315127027; nextExpiration=1715315127026; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:28.027 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315128027; nextExpiration=1715315128027; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:29.028 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315129028; nextExpiration=1715315129027; keyCount=0; hasEvents=false; eval=false
+2024-05-09 23:25:30.028 TRACE [http-nio-8080-Poller] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - timeout completed: keys processed=0; now=1715315130028; nextExpiration=1715315130028; keyCount=0; hasEvents=false; eval=false

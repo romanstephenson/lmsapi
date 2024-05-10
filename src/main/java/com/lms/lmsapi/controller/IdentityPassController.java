@@ -17,6 +17,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+
 //@Slf4j
 @RestController
 @RequestMapping(value = "/lmsapi")
@@ -29,6 +30,20 @@ public class IdentityPassController
     {
         this.identityPassService = identityPassService;
     }
+
+    @PostMapping(value = "/v1/createidentitypass")
+    public ResponseEntity<IdentityPass> createidentitypass(@RequestBody IdentityPass identitypass) 
+    {
+        if(identitypass != null)
+        {
+            IdentityPass savedIdentityPass = identityPassService.createIdentityPass(identitypass);
+
+            return new ResponseEntity<>(savedIdentityPass, HttpStatus.CREATED);
+        }
+        
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
+    
 
     @GetMapping(value = "/v1/identitypass/{userid}")
     public ResponseEntity<IdentityPass> getIdentPass(@PathVariable("userid") Long userid)
@@ -56,6 +71,28 @@ public class IdentityPassController
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
         }
+    }
+
+     /** updates an existing password for a user
+     * @param identity
+     * @return returns updated identity pass object
+     */
+    @PutMapping(value = "/v1/updateidentity/{id}")
+    public ResponseEntity<IdentityPass> updateIdentityPass(@RequestBody IdentityPass identityPass, @PathVariable Long id) 
+    {
+        System.out.println(identityPass);
+        
+        if(identityPass != null && id > 0)
+        {
+            identityPass.setIdentpassid(id);
+
+            IdentityPass updatedIdentityPass = identityPassService.updatIdentityPass(identityPass);
+
+            return new ResponseEntity<>(updatedIdentityPass, HttpStatus.OK);
+        }
+
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        
     }
     
 } 

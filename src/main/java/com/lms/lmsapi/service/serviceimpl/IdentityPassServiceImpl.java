@@ -1,6 +1,7 @@
 package com.lms.lmsapi.service.serviceimpl;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -75,14 +76,15 @@ public class IdentityPassServiceImpl implements IdentityPassService
             return Pass;    
         } else 
         {
-            throw new IdentityPassNotFoundException("Identity Pass not found");    
+            throw new IdentityPassNotFoundException("Identity Pass not found for user with ID: " + userid);    
         }
     }
+    
 
     @Override
     public IdentityPass updatIdentityPass(IdentityPass identityPass)
     {
-        if (identityPass.getIdentpassid() != null) 
+        if (!Objects.isNull(identityPass)) 
         {
             IdentityPass existingIdentityPass = identityPassRepository.findById(identityPass.getIdentpassid().longValue()).get();
 
@@ -90,7 +92,7 @@ public class IdentityPassServiceImpl implements IdentityPassService
             existingIdentityPass.setIsActive(identityPass.getIsActive());
             existingIdentityPass.setUserid(identityPass.getUserid());
             existingIdentityPass.setValidtill(identityPass.getValidtill());
-            existingIdentityPass.setCreatedDt(identityPass.getCreatedDt());
+            //existingIdentityPass.setCreatedDt(identityPass.getCreatedDt());
             existingIdentityPass.setModifiedDt(identityPass.getModifiedDt());
 
             IdentityPass updatedIdentityPass = identityPassRepository.save(existingIdentityPass);
