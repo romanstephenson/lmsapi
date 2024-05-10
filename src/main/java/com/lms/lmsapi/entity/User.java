@@ -81,7 +81,7 @@ public class User implements Serializable {
      * it happens because email has reference to user and user has reference to email which then causes an infinite json recursion
      */ 
     @JsonManagedReference
-    @OneToMany(mappedBy = "userid", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "userid", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<IdentityPass> pass = new ArrayList<IdentityPass>();
     //private IdentityPass pass;
 

@@ -1,16 +1,12 @@
 package com.lms.lmsapi.service;
-
-import java.util.List;
-
 import com.lms.lmsapi.entity.IdentityPass;
-import com.lms.lmsapi.entity.User;
 
 public interface IdentityPassService 
 {
-    List<IdentityPass> getAllIdentityPass();
-    IdentityPass getIdentityPassByUserId(Long identpassid);
+    //List<IdentityPass> getAllIdentityPass();
+    IdentityPass getIdentityPass(Long identpassid);
     IdentityPass createIdentityPass(IdentityPass identpass);
     IdentityPass updatIdentityPass(IdentityPass identpass);
-    //IdentityPass findByUseridAndIsactive(User userid /*, Long isactive */);
+    IdentityPass getIdentityPassActive(Long userid);
     void deleteIdentityPass(Long identpassid);
 }

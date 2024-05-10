@@ -11,5 +11,5 @@ import com.lms.lmsapi.entity.User;
 public interface IdentityPassRepository extends JpaRepository<IdentityPass, Long>, JpaSpecificationExecutor<IdentityPass>
 {
     //case matters for the entity attributes being mentioned in name of function
-    IdentityPass findByUseridAndIsActive(User userid , int isActive);
+    IdentityPass findByUseridAndIsActive(User user , int isActive);
 }

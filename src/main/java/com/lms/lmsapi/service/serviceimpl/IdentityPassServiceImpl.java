@@ -10,6 +10,7 @@ import com.lms.lmsapi.entity.IdentityPass;
 import com.lms.lmsapi.entity.User;
 import com.lms.lmsapi.exception.IdentityPassNotFoundException;
 import com.lms.lmsapi.repository.IdentityPassRepository;
+import com.lms.lmsapi.repository.UserRepository;
 import com.lms.lmsapi.service.IdentityPassService;
 
 @Service
@@ -17,12 +18,14 @@ public class IdentityPassServiceImpl implements IdentityPassService
 {
     @Autowired
     private IdentityPassRepository identityPassRepository;
+    @Autowired
+    private UserRepository userRepository;
 
-    @Override
-    public List<IdentityPass> getAllIdentityPass()
-    {
-        return (List<IdentityPass>) identityPassRepository.findAll();
-    }
+    // @Override
+    // public List<IdentityPass> getAllIdentityPass()
+    // {
+    //     return (List<IdentityPass>) identityPassRepository.findAll();
+    // }
 
     @Override
     public IdentityPass createIdentityPass(IdentityPass identityPass)
@@ -37,14 +40,14 @@ public class IdentityPassServiceImpl implements IdentityPassService
     }
 
     @Override
-    public IdentityPass getIdentityPassByUserId(Long id)
+    public IdentityPass getIdentityPass(Long id)
     {
         if(id == null) 
         {
             throw new IdentityPassNotFoundException("User id can not be null.");
         }
 
-        Optional <IdentityPass> optionalPass = identityPassRepository.findById(id);
+        Optional<IdentityPass> optionalPass = identityPassRepository.findById(id);
 
         if (optionalPass.isPresent()) 
         {
@@ -55,24 +58,26 @@ public class IdentityPassServiceImpl implements IdentityPassService
         }
     }
 
-    // @Override
-    // public IdentityPass findByUserIdAndIsActive(User userid /* , Long isactive*/)
-    // {
-    //     if(userid == null /*|| isactive == null*/)
-    //     {
-    //         throw new IdentityPassNotFoundException("User id or isactive can not be null.");
-    //     }
+    @Override
+    public IdentityPass getIdentityPassActive(Long userid)
+    {
+        if(userid == null)
+        {
+            throw new IdentityPassNotFoundException("User id or isactive can not be null.");
+        }
 
-    //     IdentityPass Pass = identityPassRepository.findByUseridAndIsactive(userid.getUserid(), userid.getIsActive() /* ,isactive*/);
+        Optional<User> user = userRepository.findById(userid);
 
-    //     if (Pass != null) 
-    //     {
-    //         return Pass;    
-    //     } else 
-    //     {
-    //         throw new IdentityPassNotFoundException("Identity Pass not found");    
-    //     }
-    // }
+        IdentityPass Pass = identityPassRepository.findByUseridAndIsActive(user.get(), 1);
+
+        if (Pass != null) 
+        {
+            return Pass;    
+        } else 
+        {
+            throw new IdentityPassNotFoundException("Identity Pass not found");    
+        }
+    }
 
     @Override
     public IdentityPass updatIdentityPass(IdentityPass identityPass)
