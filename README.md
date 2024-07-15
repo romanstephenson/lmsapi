@@ -11,3 +11,4 @@
 * 5. Create, Update, Get Books that students can borrow
 * 6. Create, Update, Get Category of Books that books can be linked to
 * 7. Postman collection for endpoint tests ( you can import into your postman instance )
+* 8. Security with API setup
