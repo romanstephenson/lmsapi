@@ -1,11 +1,9 @@
 package com.lms.lmsapi.controller;
 
 import com.lms.lmsapi.entity.*;
-import com.lms.lmsapi.exception.FacultyNotFoundException;
+// import com.lms.lmsapi.exception.FacultyNotFoundException;
 import com.lms.lmsapi.exception.IdentityPassNotFoundException;
 import com.lms.lmsapi.service.*;
-
-import java.util.Optional;
 
 //import lombok.extern.slf4j.Slf4j;
 

@@ -49,7 +49,7 @@ public class IdentityPass implements Serializable
     private Long validtill;
 
     @Column(nullable = false)
-    private Date createdDt;
+    private Date createdDt; 
 
     @Column(nullable = false)
     private Date modifiedDt;

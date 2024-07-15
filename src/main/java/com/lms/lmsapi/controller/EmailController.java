@@ -52,7 +52,7 @@ public class EmailController
     {
         System.out.println(email);
         
-        if(email != null || id > 0)
+        if(email != null && id > 0)
         {
             email.setEmailid(id);
 
