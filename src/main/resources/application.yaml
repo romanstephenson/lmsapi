@@ -1,17 +1,20 @@
+---
 spring:
   jpa:
-    open-in-view: 'false'
+    open-in-view: "false"
     properties:
       hibernate:
-        '[default_schema]': dbo
-        '[format_sql]': true
-        '[show_sql]': true
+        "[default_schema]": dbo
+        "[format_sql]": true
+        "[show_sql]": true
         dialect: org.hibernate.dialect.SQLServerDialect
-    show-sql: 'true'
+    show-sql: "true"
   jackson:
     time-zone: EST
   datasource:
-    url: jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;integratedSecurity=true;databaseName=lms
+    url: jdbc:sqlserver://localhost:1433;encrypt=false;databaseName=LMS;trustServerCertificate=true;integratedSecurity=true
+    #username: null
+    #password: null
   profiles:
     active: development
 logging:
@@ -24,4 +27,4 @@ logging:
         type:
           descriptor:
             sql: trace
-  config: src/main/resources/log4j2.properties
+  config: lmsapi/src/main/resources/log4j2.properties

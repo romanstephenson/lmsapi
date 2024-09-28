@@ -7,12 +7,10 @@ import org.springframework.boot.autoconfigure.security.servlet.UserDetailsServic
 
 
 //@SpringBootApplication
-@SpringBootApplication(exclude = {SecurityAutoConfiguration.class, UserDetailsServiceAutoConfiguration.class})
+@SpringBootApplication(exclude = {SecurityAutoConfiguration.class, UserDetailsServiceAutoConfiguration.class}) 
 public class LmsapiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LmsapiApplication.class, args);
 	}
-
 }
- 

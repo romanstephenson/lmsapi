@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.lms</groupId>
 	<artifactId>lmsapi</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version> 
 	<name>lmsapi</name>
 	<description>API for a libary management system application that manages books for students and staff</description>
 	<properties>
@@ -22,7 +22,7 @@
 		<dependency>
 			<groupId>org.hibernate.orm</groupId>
 			<artifactId>hibernate-core</artifactId>
-		</dependency>
+		</dependency> 
 
 		<dependency>
          <groupId>jakarta.persistence</groupId>
@@ -64,10 +64,16 @@
 			<version>2.16.1</version>
 		</dependency>
 
-		<dependency>
+		<!--<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
 			<scope>runtime</scope>
+		</dependency>-->
+
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>12.8.1.jre11</version>
 		</dependency>
 
 		<dependency>

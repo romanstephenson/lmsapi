@@ -10,7 +10,11 @@ END
 
 CREATE DATABASE LMS;
 
+GO
+
 USE LMS;
+
+GO
 
 exec sp_who2
 

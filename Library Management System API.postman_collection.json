@@ -42,6 +42,56 @@
 			"response": []
 		},
 		{
+			"name": "Get All User Types Secure",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port_number}}/{{app}}/{{version}}/{{usertypes_endpoint}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port_number}}",
+					"path": [
+						"{{app}}",
+						"{{version}}",
+						"{{usertypes_endpoint}}"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
 			"name": "Get All Faculties",
 			"event": [
 				{
@@ -52,11 +102,27 @@
 							"    pm.response.to.have.status(200);",
 							"});"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -86,15 +152,31 @@
 							"    pm.response.to.have.status(200);",
 							"});"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{host}}:{{port_number}}/{{app}}/{{version}}/{{faculty_endpoint}}/1",
+					"raw": "{{host}}:{{port_number}}/{{app}}/{{version}}/{{faculty_endpoint}}/70",
 					"host": [
 						"{{host}}"
 					],
@@ -103,7 +185,133 @@
 						"{{app}}",
 						"{{version}}",
 						"{{faculty_endpoint}}",
-						"1"
+						"70"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Identity Pass",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userid\" : { \"userid\" : 1000010 }\r\n    ,\"isActive\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port_number}}/{{app}}/{{version}}/{{identitypass_endpoint}}/322",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port_number}}",
+					"path": [
+						"{{app}}",
+						"{{version}}",
+						"{{identitypass_endpoint}}",
+						"322"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Active Identity Pass",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userid\" : { \"userid\" : 1000010 }\r\n    ,\"isActive\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port_number}}/{{app}}/{{version}}/{{identitypassactive_endpoint}}/1000010",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port_number}}",
+					"path": [
+						"{{app}}",
+						"{{version}}",
+						"{{identitypassactive_endpoint}}",
+						"1000010"
 					]
 				},
 				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
@@ -121,16 +329,32 @@
 							"    pm.response.to.have.status(200);",
 							"});"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n   \"facultyname\" : \"Test Faculty 5\",\r\n   \"createdDt\": \"2024-01-21\",\r\n   \"modifiedDt\": \"2024-01-21\"\r\n}",
+					"raw": "{\r\n   \"facultyname\" : \"Test Faculty 6\",\r\n   \"createdDt\": \"2024-01-21\",\r\n   \"modifiedDt\": \"2024-01-21\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -154,6 +378,65 @@
 			"response": []
 		},
 		{
+			"name": "Create Identity Pass",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"password\": \"$2a$04$XrOzk/hjSUdMZUkEMgrOdOayal82K2ffdFIZLlY5736rQ41i3m4B2\",\r\n  \"isActive\": 0,\r\n  \"userid\": { \"userid\": 1000010 },\r\n  \"validtill\": 240,\r\n  \"createdDt\":\"2024-05-01\",\r\n  \"modifiedDt\":\"2024-05-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port_number}}/{{app}}/{{version}}/{{createidentitypass_endpoint}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port_number}}",
+					"path": [
+						"{{app}}",
+						"{{version}}",
+						"{{createidentitypass_endpoint}}"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
 			"name": "Get User Type",
 			"event": [
 				{
@@ -164,11 +447,27 @@
 							"    pm.response.to.have.status(200);",
 							"});"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -199,11 +498,27 @@
 							"    pm.response.to.have.status(200);",
 							"});"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -268,7 +583,8 @@
 							"    pm.response.to.have.status(200);",
 							"});"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -276,7 +592,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{host}}:{{port_number}}/{{app}}/{{version}}/{{user_endpoint}}/1000150",
+					"raw": "{{host}}:{{port_number}}/{{app}}/{{version}}/{{user_endpoint}}/1000010",
 					"host": [
 						"{{host}}"
 					],
@@ -285,7 +601,194 @@
 						"{{app}}",
 						"{{version}}",
 						"{{user_endpoint}}",
-						"1000150"
+						"1000010"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port_number}}/{{app}}/{{version}}/{{book_endpoint}}/2999",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port_number}}",
+					"path": [
+						"{{app}}",
+						"{{version}}",
+						"{{book_endpoint}}",
+						"2999"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Books",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port_number}}/{{app}}/{{version}}/{{books_endpoint}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port_number}}",
+					"path": [
+						"{{app}}",
+						"{{version}}",
+						"{{books_endpoint}}"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Create Book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"My First Book\",\r\n    \"author\": \"Roman Stephenson\",\r\n    \"description\": \"my first book description\",\r\n    \"publisher\": \"my first book publisher\",\r\n    \"isbn\": \"some long isbn\",\r\n    \"yearpublished\": \"2023-01-12\",\r\n    \"availablecopies\": 1,\r\n    \"bookcatid\": { \"bookcatid\": 11},\r\n    \"userid\" : { \"userid\" : 1000010},\r\n    \"createdDt\": \"2024-01-12\",\r\n    \"modifiedDt\": \"2024-01-23\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port_number}}/{{app}}/{{version}}/{{createbook_endpoint}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port_number}}",
+					"path": [
+						"{{app}}",
+						"{{version}}",
+						"{{createbook_endpoint}}"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Issue Book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookid\" : { \"bookid\": 2100},\r\n    \"issuedto\" : { \"userid\" : 1000280 },\r\n    \"issuedby\" : { \"userid\" : 1000494 },\r\n    \"issueDt\" : \"2024-01-12\",\r\n    \"returnDt\" : \"2025-01-12\",\r\n    \"modifiedDt\" : \"2024-01-12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port_number}}/{{app}}/{{version}}/{{issuebook_endpoint}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port_number}}",
+					"path": [
+						"{{app}}",
+						"{{version}}",
+						"{{issuebook_endpoint}}"
 					]
 				},
 				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
@@ -304,16 +807,32 @@
 							"});",
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"Test User Type 3\",\n    \"status\":0,\n    \"description\": \"This is a test Description for this usertype\",\n    \"createdDt\": \"2024-01-12\",\n    \"modifiedDt\": \"2024-01-23\"\n}",
+					"raw": "    {\n    \"name\": \"Test User Type 6\",\n    \"status\":1,\n    \"description\": \"This is a test Description for this usertype with log\",\n    \"createdDt\": \"2024-01-12\",\n    \"modifiedDt\": \"2024-01-23\"\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -349,11 +868,27 @@
 							"});",
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -394,16 +929,32 @@
 							"});",
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"userid\" : { \"userid\" : 1000001 } ,\n    \"catid\" : { \"catid\" : 100 } ,\n    \"facultyid\" : { \"facultyid\" : 5} ,\n    \"year\": 3,\n    \"createdDt\": \"2010-10-08\",\n    \"modifiedDt\": \"2019-10-08\"\n}\n\n",
+					"raw": "{\n    \"userid\" : { \"userid\" : 1000500 } ,\n    \"catid\" : { \"catid\" : 101 } ,\n    \"facultyid\" : { \"facultyid\" : 1 },\n    \"year\": 4,\n    \"createdDt\": \"2010-10-08\",\n    \"modifiedDt\": \"2019-10-08\"\n}\n\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -430,6 +981,21 @@
 		{
 			"name": "Get All Student Categories",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -450,6 +1016,21 @@
 		{
 			"name": "Get All Book Categories",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -470,6 +1051,21 @@
 		{
 			"name": "Get Book Category",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -491,11 +1087,26 @@
 		{
 			"name": "Create Book Category",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"category\": \"Test Book category 2\",\r\n    \"createdDt\": \"2024-01-13\",\r\n    \"modifiedDt\": \"2024-01-25\"\r\n}",
+					"raw": "{\r\n    \"category\": \"Test Book category 6\",\r\n    \"createdDt\": \"2024-01-13\",\r\n    \"modifiedDt\": \"2024-01-25\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -521,11 +1132,26 @@
 		{
 			"name": "Create User",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"firstname\": \"Gannjun\",\r\n    \"middlename\": \"Marcus\",\r\n    \"lastname\": \"Datt\",\r\n    \"username\": \"gdatt\",\r\n    \"dob\": \"1970-09-30\",\r\n    \"gender\": \"M\",\r\n    \"changePass\": 1,\r\n    \"isActive\": 1,\r\n    \"createdDt\": \"2024-01-19\",\r\n    \"modifiedDt\": \"2024-01-19\"\r\n}",
+					"raw": "{\r\n    \"firstname\": \"Shanique\",\r\n    \"middlename\": \"Shamoy\",\r\n    \"lastname\": \"Martin\",\r\n    \"username\": \"shaniquem\",\r\n    \"dob\": \"1994-09-30\",\r\n    \"gender\": \"F\",\r\n    \"changePass\": 0,\r\n    \"isActive\": 1,\r\n    \"email\": [],\r\n    \"usertypemapping\": [],\r\n    \"pass\": [],\r\n    \"createdDt\": \"2024-01-19\",\r\n    \"modifiedDt\": \"2024-01-19\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -549,13 +1175,73 @@
 			"response": []
 		},
 		{
+			"name": "Create Full User",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"Roman\",\r\n    \"middlename\": \"James\",\r\n    \"lastname\": \"Montgomery\",\r\n    \"username\": \"rmontgomery\",\r\n    \"dob\": \"1994-12-30\",\r\n    \"gender\": \"M\",\r\n    \"changePass\": 0,\r\n    \"isActive\": 1,\r\n    \"email\": \r\n        [\r\n            {\r\n                \"emailAddress\": \"rmontgomery@gmail.com\",\r\n                \"isPrimary\": 1,\r\n                \"createdDt\": \"2024-01-19\",\r\n                \"modifiedDt\": \"2024-01-19\"\r\n            }\r\n        ],\r\n    \"usertypemapping\": \r\n        [ \r\n            { \r\n                \"usertypeid\":  \r\n                    { \r\n                        \"usertypeid\": 1 \r\n                    }, \r\n                \"createdDt\": \"2024-01-19\",\r\n                \"modifiedDt\": \"2024-01-19\"\r\n            } \r\n        ],\r\n    \"pass\":\r\n        [\r\n            {\r\n                \"password\": \"password\",\r\n                \"isactive\": 1,\r\n                \"validtill\": 180,\r\n                \"createdDt\": \"2024-01-19\",\r\n                \"modifiedDt\": \"2024-01-19\"\r\n            }\r\n        ],\r\n    \"createdDt\": \"2024-01-19\",\r\n    \"modifiedDt\": \"2024-01-19\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}:{{port_number}}/{{app}}/{{version}}/{{createfulluser_endpoint}}",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port_number}}",
+					"path": [
+						"{{app}}",
+						"{{version}}",
+						"{{createfulluser_endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Update User Email",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"emailAddress\": \"IngaRusted7@gmail.com\",\r\n    \"isPrimary\": 0,\r\n    \"createdDt\": \"1997-10-08\",\r\n    \"modifiedDt\": \"2024-01-23\"\r\n}\r\n",
+					"raw": "{\r\n    \"emailAddress\": \"IngaRusted5@gmail.com\",\r\n    \"isPrimary\": 0,\r\n    \"createdDt\": \"1997-10-08\",\r\n    \"modifiedDt\": \"2024-01-23\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -573,6 +1259,98 @@
 						"{{app}}",
 						"{{version}}",
 						"{{updateemail_endpoint}}",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Password",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"password\": \"$2a$04$XrOzk/hjSUdMZUkEMgrOdOayal82K2ffdFIZLlY5736rQ41i3m4B2\",\r\n  \"isActive\": 0,\r\n  \"userid\": { \"userid\": 1000010 },\r\n  \"validtill\": 240,\r\n  \"createdDt\":\"2024-05-01\",\r\n  \"modifiedDt\":\"2024-05-02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}:{{port_number}}/{{app}}/{{version}}/{{updateidentitypass_endpoint}}/1012",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port_number}}",
+					"path": [
+						"{{app}}",
+						"{{version}}",
+						"{{updateidentitypass_endpoint}}",
+						"1012"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{apivalue}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{apikey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailAddress\": \"IngaRusted7@gmail.com\",\r\n    \"isPrimary\": 0,\r\n    \"createdDt\": \"1997-10-08\",\r\n    \"modifiedDt\": \"2024-01-23\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}:{{port_number}}/{{app}}/{{version}}/{{updatebook_endpoint}}/9",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port_number}}",
+					"path": [
+						"{{app}}",
+						"{{version}}",
+						"{{updatebook_endpoint}}",
 						"9"
 					]
 				}
@@ -696,6 +1474,16 @@
 			"type": "string"
 		},
 		{
+			"key": "updateidentitypass_endpoint",
+			"value": "updateidentity",
+			"type": "string"
+		},
+		{
+			"key": "updatebook_endpoint",
+			"value": "updatebook",
+			"type": "string"
+		},
+		{
 			"key": "users_endpoint",
 			"value": "users",
 			"type": "string"
@@ -708,6 +1496,56 @@
 		{
 			"key": "createstudent_endpoint",
 			"value": "createstudent",
+			"type": "string"
+		},
+		{
+			"key": "createbook_endpoint",
+			"value": "createbook",
+			"type": "string"
+		},
+		{
+			"key": "book_endpoint",
+			"value": "book",
+			"type": "string"
+		},
+		{
+			"key": "identitypassactive_endpoint",
+			"value": "activeidentitypass",
+			"type": "string"
+		},
+		{
+			"key": "identitypass_endpoint",
+			"value": "identitypass",
+			"type": "string"
+		},
+		{
+			"key": "createidentitypass_endpoint",
+			"value": "createidentitypass",
+			"type": "string"
+		},
+		{
+			"key": "books_endpoint",
+			"value": "books",
+			"type": "string"
+		},
+		{
+			"key": "createfulluser_endpoint",
+			"value": "createfulluser",
+			"type": "string"
+		},
+		{
+			"key": "issuebook_endpoint",
+			"value": "issuebook",
+			"type": "string"
+		},
+		{
+			"key": "apikey",
+			"value": "LMS-API-KEY",
+			"type": "string"
+		},
+		{
+			"key": "apivalue",
+			"value": "lmsapivalue",
 			"type": "string"
 		}
 	]
