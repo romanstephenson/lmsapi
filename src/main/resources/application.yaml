@@ -21,8 +21,8 @@ logging:
   level:
     org:
       springframework:
-        web: error
-      apache: error
+        web: info
+      apache: info
       hibernate:
         type:
           descriptor:

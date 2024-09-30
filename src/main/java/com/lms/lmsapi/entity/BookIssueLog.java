@@ -14,8 +14,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
-
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({"bookid","issuedto","issuedby","issueDt","returnDt","modifiedDt"})
 @Data

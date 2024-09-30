@@ -30,7 +30,7 @@ public class UserTypeMapping  implements Serializable
     @OneToOne
     @JsonProperty("userid")
     /* needed for bidirectional relationship. otherwise a coult not write json infinite recursion overflow will take please.
-     * it happens because email has reference to user and user has reference to email which then causes an infinite json recursion
+     * it happens because usertypemapping has reference to user and user has reference to usertypemapping which then causes an infinite json recursion
      */
     @JsonBackReference  
     @JoinColumn(name="userid")

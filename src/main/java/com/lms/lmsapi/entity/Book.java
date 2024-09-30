@@ -11,14 +11,16 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({"bookid","title","author","description","publisher","isbn","yearpublished","availablecopies","bookcatid","userid","createdDt","modifiedDt"})
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "Book")

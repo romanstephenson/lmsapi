@@ -11,35 +11,38 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({"userid","catid","facultyid","year","createdDt","modifiedDt"})
-@Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 @Table(name = "Student")
 public class Student implements Serializable
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonProperty("id")
     private Long id;
 
     @OneToOne
     @JsonProperty("userid")
-	@JoinColumn (name="userid",insertable = false, updatable = false)
+	@JoinColumn (name="userid",insertable = true, updatable = false)
     private User userid;
 
     @OneToOne
     @JsonProperty("catid")
-    @JoinColumn(name = "catid",insertable = false, updatable = false)
+    @JoinColumn(name = "catid",insertable = true, updatable = false)
     private StudentCategory catid;
 
     @OneToOne
     @JsonProperty("facultyid")
-    @JoinColumn(name = "facultyid",insertable = false, updatable = false)
+    @JoinColumn(name = "facultyid",insertable = true, updatable = false)
     private Faculty facultyid;
 
     @Column(nullable = false)
