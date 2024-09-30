@@ -15,38 +15,32 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({"userid","depid","hireStartDt","hireEndDt","createdDt","modifiedDt"})
+@JsonPropertyOrder({"depid","departmentname","createdDt","modifiedDt"})
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Staff")
-public class Staff implements Serializable
+@Table(name = "Department")
+public class Department implements Serializable
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
-    @OneToOne
-    @JsonProperty("userid")
-	@JoinColumn (name="userid",insertable = true, updatable = false)
-    private User userid;
-
-    @OneToOne
     @JsonProperty("depid")
-    @JoinColumn (name="depid",insertable = true, updatable = false)
-    private Department depid;
+    private Long depid;
 
     @Column(nullable = false)
-    private Date hireStartDt;
+    private String departmentname;
 
-    @Column(nullable = false)
-    private Date hireEndDt;
+    @OneToOne
+    @JsonProperty("facultyid")
+    @JoinColumn(name = "facultyid", insertable = true, updatable = false)
+    private Faculty facultyid;
 
     @Column(nullable = false)
     private Date createdDt;
 
     @Column(nullable = false)
     private Date modifiedDt;
+
 }
