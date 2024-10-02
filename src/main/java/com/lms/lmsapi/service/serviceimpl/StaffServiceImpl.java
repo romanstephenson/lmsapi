@@ -51,7 +51,7 @@ public class StaffServiceImpl implements StaffService
 
         existingStaff.setUserid(staff.getUserid());
         existingStaff.setDepid(staff.getDepid());
-        existingStaff.setHireStartDt(staff.getHireStartDt());
+        //existingStaff.setHireStartDt(staff.getHireStartDt());
         existingStaff.setHireEndDt(staff.getHireEndDt());
         existingStaff.setModifiedDt(staff.getModifiedDt());
 

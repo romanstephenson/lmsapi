@@ -3,8 +3,6 @@ package com.lms.lmsapi.controller;
 import com.lms.lmsapi.entity.*;
 import com.lms.lmsapi.service.*;
 
-//import lombok.extern.slf4j.Slf4j;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;

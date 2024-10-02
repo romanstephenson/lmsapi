@@ -3,10 +3,6 @@ package com.lms.lmsapi.controller;
 import com.lms.lmsapi.entity.*;
 import com.lms.lmsapi.service.*;
 
-import lombok.AllArgsConstructor;
-//import lombok.extern.slf4j.Slf4j;
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@AllArgsConstructor
 @RequestMapping(value = "/lmsapi")
 public class StudentController 
 {
