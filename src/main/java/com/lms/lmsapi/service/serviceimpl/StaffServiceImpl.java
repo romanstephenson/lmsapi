@@ -1,6 +1,7 @@
 package com.lms.lmsapi.service.serviceimpl;
 
 import com.lms.lmsapi.entity.Staff;
+import com.lms.lmsapi.exception.StaffException;
 import com.lms.lmsapi.repository.StaffRepository;
 import com.lms.lmsapi.service.StaffService;
 
@@ -25,13 +26,22 @@ public class StaffServiceImpl implements StaffService
     @Override
     public Staff getStaff(Long id)
     {
+        if( id == null)
+        {
+            throw new StaffException("Staff User Id can not be empty or null.");
+        }
+
         Optional<Staff> optionalStaff = staffRepository.findById(id);
 
-        // if(optionalStaff.isPresent())
-        // {
+        if(optionalStaff.isPresent())
+        {
             return optionalStaff.get();
-        //}
-
+        }
+        else
+        {
+            throw new StaffException(id);
+        }
+        
     }
 
     @Override
