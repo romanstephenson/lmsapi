@@ -27,4 +27,4 @@ logging:
         type:
           descriptor:
             sql: trace
-  config: lmsapi/src/main/resources/log4j2.properties
+  config: src/main/resources/log4j2.properties

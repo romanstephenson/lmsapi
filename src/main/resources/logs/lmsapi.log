@@ -52,3 +52,30 @@
 2024-10-03 19:42:19.779 INFO [http-nio-8080-exec-1] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-10-03 19:42:19.779 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:532)] - Initializing Servlet 'dispatcherServlet'
 2024-10-03 19:42:19.782 INFO [http-nio-8080-exec-1] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:554)] - Completed initialization in 3 ms
+2024-12-17 16:56:16.942 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:50)] - Starting LmsapiApplication using Java 17.0.13 with PID 13008 (C:\Users\steph\Documents\Dev\lmsapi\target\classes started by steph in C:\Users\steph\Documents\Dev\lmsapi)
+2024-12-17 16:56:16.951 INFO [main] [org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:660)] - The following 1 profile is active: "development"
+2024-12-17 16:56:17.971 INFO [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:143)] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-17 16:56:18.126 INFO [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:211)] - Finished Spring Data repository scanning in 142 ms. Found 13 JPA repository interfaces.
+2024-12-17 16:56:19.217 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:111)] - Tomcat initialized with port 8080 (http)
+2024-12-17 16:56:19.235 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-17 16:56:19.239 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting service [Tomcat]
+2024-12-17 16:56:19.239 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-12-17 16:56:19.311 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring embedded WebApplicationContext
+2024-12-17 16:56:19.313 INFO [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:296)] - Root WebApplicationContext: initialization completed in 2324 ms
+2024-12-17 16:56:19.800 INFO [main] [com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:109)] - HikariPool-1 - Starting...
+2024-12-17 16:56:20.158 INFO [main] [com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:554)] - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 689d58af-2bf7-4de7-aa7b-37625956aad8
+2024-12-17 16:56:20.160 INFO [main] [com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:122)] - HikariPool-1 - Start completed.
+2024-12-17 16:56:20.223 INFO [main] [org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation(LogHelper.java:31)] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-17 16:56:20.338 INFO [main] [org.hibernate.Version.logVersion(Version.java:44)] - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-12-17 16:56:20.383 INFO [main] [org.hibernate.cache.internal.RegionFactoryInitiator.initiateService(RegionFactoryInitiator.java:50)] - HHH000026: Second-level cache disabled
+2024-12-17 16:56:20.786 INFO [main] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer(SpringPersistenceUnitInfo.java:87)] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-17 16:56:20.858 WARN [main] [org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.constructDialect(DialectFactoryImpl.java:153)] - HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-17 16:56:21.933 INFO [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService(JtaPlatformInitiator.java:59)] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-17 16:56:21.935 INFO [main] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:437)] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-17 16:56:23.316 INFO [main] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver.<init>(EndpointLinksResolver.java:60)] - Exposing 1 endpoint beneath base path '/actuator'
+2024-12-17 16:56:23.954 INFO [main] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-17 16:56:23.986 INFO [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:243)] - Tomcat started on port 8080 (http) with context path '/'
+2024-12-17 16:56:24.009 INFO [main] [org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:56)] - Started LmsapiApplication in 7.495 seconds (process running for 8.266)
+2024-12-17 16:56:47.565 INFO [http-nio-8080-exec-2] [org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173)] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-17 16:56:47.566 INFO [http-nio-8080-exec-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:532)] - Initializing Servlet 'dispatcherServlet'
+2024-12-17 16:56:47.567 INFO [http-nio-8080-exec-2] [org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:554)] - Completed initialization in 1 ms
